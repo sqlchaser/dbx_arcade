@@ -1,0 +1,197 @@
+[
+  {
+    "id": "doom",
+    "title": "DOOM",
+    "year": 1993,
+    "genre": "FPS",
+    "blurb": "id Software's genre-defining shooter. Episode 1: Knee-Deep in the Dead.",
+    "download_url": "https://archive.org/download/DoomsharewareEpisode/DoomV1.9sw1995idSoftwareInc.action.zip",
+    "launch_cmd": "DOOM.EXE",
+    "cycles": "max"
+  },
+  {
+    "id": "wolf3d",
+    "title": "Wolfenstein 3D",
+    "year": 1992,
+    "genre": "FPS",
+    "blurb": "Escape Castle Wolfenstein. The granddaddy of the first-person shooter.",
+    "download_url": "https://archive.org/download/wolf3dsw/wolf3dsw.zip",
+    "launch_cmd": "WOLF3D.EXE",
+    "cycles": "max"
+  },
+  {
+    "id": "rott",
+    "title": "Rise of the Triad",
+    "year": 1994,
+    "genre": "FPS",
+    "blurb": "The HUNT Begins. Ludicrous gibs, dog mode, and the Excalibat.",
+    "download_url": "https://archive.org/download/msdos_Rise_of_the_Triad_-_The_Hunt_Begins_Deluxe_Edition_1995/Rise_of_the_Triad_-_The_Hunt_Begins_Deluxe_Edition_1995.zip",
+    "launch_cmd": "cd RotTDLX\\ROTT\nROTT.EXE",
+    "cycles": "max"
+  },
+  {
+    "id": "blakestone",
+    "title": "Blake Stone: Aliens of Gold",
+    "year": 1993,
+    "genre": "FPS",
+    "blurb": "Wolf3D-engine sci-fi shooter. Hunt Dr. Goldfire across six episodes.",
+    "download_url": "https://archive.org/download/Bs-aog-sw1/bstone.zip",
+    "launch_cmd": "BS_AOG.EXE",
+    "cycles": "max"
+  },
+  {
+    "id": "keen4",
+    "title": "Commander Keen 4",
+    "year": 1991,
+    "genre": "Platformer",
+    "blurb": "Secret of the Oracle. Billy Blaze, 8-year-old genius, saves the galaxy.",
+    "download_url": "https://archive.org/download/msdos_Commander_Keen_4_-_Secret_of_the_Oracle_1991/Commander_Keen_4_-_Secret_of_the_Oracle_1991.zip",
+    "launch_cmd": "cd CKeen4\nKEEN4E.EXE"
+  },
+  {
+    "id": "dukeii",
+    "title": "Duke Nukem II",
+    "year": 1993,
+    "genre": "Platformer",
+    "blurb": "Run-and-gun side-scroller. Duke vs. the Rigelatins. Freeware.",
+    "download_url": "https://archive.org/download/DukeNukemIi/duke2.ZIP",
+    "launch_cmd": "NUKEM2.EXE"
+  },
+  {
+    "id": "cosmo",
+    "title": "Cosmo's Cosmic Adventure",
+    "year": 1992,
+    "genre": "Platformer",
+    "blurb": "Apogee freeware. A little alien with suction-cup hands. Episode 1.",
+    "download_url": "https://archive.org/download/cosmo1-sw/cosmo1.zip",
+    "launch_cmd": "COSMO1.EXE"
+  },
+  {
+    "id": "hocus",
+    "title": "Hocus Pocus",
+    "year": 1994,
+    "genre": "Platformer",
+    "blurb": "Apprentice wizard blasts through a fantasy world. Apogee shareware.",
+    "download_url": "https://archive.org/download/msdos_Hocus_Pocus_1994/Hocus_Pocus_1994.zip",
+    "launch_cmd": "cd HocusPoc\\HOCUS\nHOCUS.EXE"
+  },
+  {
+    "id": "jazz",
+    "title": "Jazz Jackrabbit",
+    "year": 1994,
+    "genre": "Platformer",
+    "blurb": "Epic's blazing-fast run-and-gun. A green rabbit with a blaster.",
+    "download_url": "https://archive.org/download/JazzJackrabbit/jazz11.zip",
+    "launch_cmd": "JAZZ.EXE"
+  },
+  {
+    "id": "crystalcaves",
+    "title": "Crystal Caves",
+    "year": 1991,
+    "genre": "Platformer",
+    "blurb": "Mylo Steamwitz mines crystals across a hostile galaxy. Apogee shareware.",
+    "download_url": "https://archive.org/download/msdos_Crystal_Caves_1991/Crystal_Caves_1991.zip",
+    "launch_cmd": "cd CrystalC\\cc1\nCC1.EXE"
+  },
+  {
+    "id": "secretagent",
+    "title": "Secret Agent",
+    "year": 1992,
+    "genre": "Platformer",
+    "blurb": "Agent 006 1/2 vs. the Diabolical Society. Apogee shareware.",
+    "download_url": "https://archive.org/download/msdos_Secret_Agent_1992/Secret_Agent_1992.zip",
+    "launch_cmd": "cd SecretAg\nSAM1.EXE"
+  },
+  {
+    "id": "tyrian",
+    "title": "Tyrian 2000",
+    "year": 1999,
+    "genre": "Shoot-em-up",
+    "blurb": "Gorgeous vertical shmup with a deep weapon-upgrade system. Freeware.",
+    "download_url": "https://archive.org/download/msdos_Tyrian_2000_1999/Tyrian_2000_1999.zip",
+    "launch_cmd": "cd Tyrian20\ntyrian.exe",
+    "cycles": "max"
+  },
+  {
+    "id": "majorstryker",
+    "title": "Major Stryker",
+    "year": 1993,
+    "genre": "Shoot-em-up",
+    "blurb": "Horizontal Apogee shooter in the Defender lineage. Freeware.",
+    "download_url": "https://archive.org/download/msdos_Major_Stryker_1993/Major_Stryker_1993.zip",
+    "launch_cmd": "cd MajorStr\\MAJOR\nSTRYKER.EXE"
+  },
+  {
+    "id": "epicpinball",
+    "title": "Epic Pinball",
+    "year": 1993,
+    "genre": "Pinball",
+    "blurb": "Smooth-scrolling pinball with the legendary Android table. Shareware.",
+    "download_url": "https://archive.org/download/epic_pinball_11/epic_pinball.zip",
+    "launch_cmd": "PINBALL.EXE"
+  },
+  {
+    "id": "omf2097",
+    "title": "One Must Fall 2097",
+    "year": 1994,
+    "genre": "Fighting",
+    "blurb": "Robot-fighting tournament with upgradable pilots. Epic freeware classic.",
+    "download_url": "https://archive.org/download/omf-2097/OMF2097.zip",
+    "launch_cmd": "cd OMF2097\nFILE0001.EXE",
+    "cycles": "max"
+  },
+  {
+    "id": "wackywheels",
+    "title": "Wacky Wheels",
+    "year": 1994,
+    "genre": "Racing",
+    "blurb": "Apogee's Mario-Kart-style racer with weaponized critters. Shareware.",
+    "download_url": "https://archive.org/download/WackyWheels/WACKY.ZIP",
+    "launch_cmd": "WW.EXE"
+  },
+  {
+    "id": "scorchedearth",
+    "title": "Scorched Earth",
+    "year": 1991,
+    "genre": "Artillery",
+    "blurb": "\"The Mother of All Games.\" Turn-based tank artillery duels. Freeware.",
+    "download_url": "https://archive.org/download/msdos_SCORCH15_shareware/SCORCH15.zip",
+    "launch_cmd": "SCORCH.EXE"
+  },
+
+  {
+    "id": "heretic",
+    "title": "Heretic",
+    "year": 1994,
+    "genre": "FPS",
+    "blurb": "Raven's dark-fantasy shooter on the DOOM engine. Shareware E1.",
+    "download_url": "https://archive.org/download/heretic-dos/HERETIC.ZIP",
+    "launch_cmd": "INSTALL.BAT\ncd \\HERETIC\nHERETIC.EXE",
+    "cycles": "max",
+    "needs_install": true,
+    "note": "DEICE self-installer — not click-and-play yet; deferred for build-time extraction."
+  },
+  {
+    "id": "descent",
+    "title": "Descent",
+    "year": 1995,
+    "genre": "FPS",
+    "blurb": "Six-degrees-of-freedom shooter through mining tunnels. Shareware demo.",
+    "download_url": "https://archive.org/download/Various_DOS_Abandonware_Ark/Descent%20%281995%29%28Interplay%29.zip",
+    "launch_cmd": "INSTALL.EXE\ndescent.exe",
+    "cycles": "max",
+    "needs_install": true,
+    "note": "install.exe + .sow self-installer — deferred for build-time extraction."
+  },
+  {
+    "id": "raptor",
+    "title": "Raptor: Call of the Shadows",
+    "year": 1994,
+    "genre": "Shoot-em-up",
+    "blurb": "Apogee's slick vertical shooter with a between-mission cash shop. Shareware.",
+    "download_url": "https://archive.org/download/Apogee-download-pack/Raptor/Raptor_ep1.zip",
+    "launch_cmd": "INSTALL.EXE\ncd \\RAPTOR\nRAPTOR.EXE",
+    "needs_install": true,
+    "note": "Apogee .SHR self-installer — deferred for build-time extraction."
+  }
+]

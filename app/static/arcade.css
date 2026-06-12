@@ -1,0 +1,207 @@
+/* ============ DBX ARCADE ============ */
+:root {
+  --bg: #07080d;
+  --bg-2: #0d1018;
+  --panel: #11141f;
+  --panel-2: #161a28;
+  --ink: #e8ecf6;
+  --ink-dim: #8b93ad;
+  --neon: #ff2e88;       /* hot pink */
+  --neon-2: #21e6c1;     /* cyan */
+  --neon-3: #ffd23f;     /* amber */
+  --line: #232a3d;
+  --glow: 0 0 6px rgba(255,46,136,.7), 0 0 18px rgba(255,46,136,.35);
+  --glow-cyan: 0 0 6px rgba(33,230,193,.7), 0 0 18px rgba(33,230,193,.3);
+  --radius: 10px;
+  --shadow: 0 8px 30px rgba(0,0,0,.55);
+}
+[data-theme="light"] {
+  --bg: #eef1f8;
+  --bg-2: #e3e7f2;
+  --panel: #ffffff;
+  --panel-2: #f4f6fc;
+  --ink: #161a28;
+  --ink-dim: #58607a;
+  --line: #d3d9ea;
+  --neon: #d6196f;
+  --neon-2: #0aa890;
+  --neon-3: #c08800;
+  --glow: 0 0 0 transparent;
+  --glow-cyan: 0 0 0 transparent;
+  --shadow: 0 6px 22px rgba(40,50,90,.14);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; height: 100%; }
+body {
+  background:
+    radial-gradient(1200px 600px at 50% -10%, rgba(255,46,136,.10), transparent 60%),
+    radial-gradient(900px 500px at 90% 10%, rgba(33,230,193,.08), transparent 60%),
+    var(--bg);
+  color: var(--ink);
+  font-family: "VT323", "Courier New", monospace;
+  font-size: 18px;
+  -webkit-font-smoothing: none;
+  overflow-x: hidden;
+}
+a { color: var(--neon-2); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* CRT scanline overlay */
+.crt {
+  pointer-events: none;
+  position: fixed; inset: 0; z-index: 9000;
+  background: repeating-linear-gradient(
+    to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 2px, rgba(0,0,0,.16) 3px, rgba(0,0,0,0) 4px);
+  mix-blend-mode: multiply;
+  opacity: .5;
+}
+[data-theme="light"] .crt { opacity: .12; }
+
+/* ---------- Top bar ---------- */
+.topbar {
+  position: relative; z-index: 10;
+  padding: 28px 20px 12px;
+  text-align: center;
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(255,255,255,.02), transparent);
+}
+.brand { display: flex; align-items: center; justify-content: center; gap: 16px; }
+.brand-mark { color: var(--neon-2); font-size: 22px; text-shadow: var(--glow-cyan); letter-spacing: -3px; }
+.logo {
+  font-family: "Press Start 2P", monospace;
+  font-size: clamp(22px, 5vw, 46px);
+  margin: 0; letter-spacing: 2px;
+  color: var(--ink);
+  text-shadow: var(--glow);
+  position: relative;
+}
+.logo::before {
+  content: attr(data-text);
+  position: absolute; left: 2px; top: 0; color: var(--neon-2);
+  opacity: .55; z-index: -1; transform: translate(-2px, 1px);
+  text-shadow: var(--glow-cyan);
+}
+.tagline {
+  font-family: "Press Start 2P", monospace;
+  font-size: clamp(7px, 1.4vw, 10px);
+  color: var(--neon-3); letter-spacing: 2px; margin: 14px 0 18px;
+}
+.controls {
+  display: flex; gap: 10px; align-items: center; justify-content: center;
+  flex-wrap: wrap; max-width: 1100px; margin: 0 auto;
+}
+.search {
+  background: var(--panel); border: 1px solid var(--line); color: var(--ink);
+  font-family: "VT323", monospace; font-size: 18px;
+  padding: 8px 14px; border-radius: var(--radius); min-width: 220px; outline: none;
+}
+.search:focus { border-color: var(--neon); box-shadow: var(--glow); }
+.search::placeholder { color: var(--ink-dim); }
+.genres { display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; }
+.chip {
+  cursor: pointer; user-select: none;
+  background: var(--panel); border: 1px solid var(--line); color: var(--ink-dim);
+  padding: 6px 12px; border-radius: 999px; font-size: 16px; letter-spacing: .5px;
+  transition: all .12s ease;
+}
+.chip:hover { color: var(--ink); border-color: var(--neon-2); }
+.chip.active { color: var(--bg); background: var(--neon-2); border-color: var(--neon-2); box-shadow: var(--glow-cyan); }
+.btn-ghost {
+  cursor: pointer; background: var(--panel); border: 1px solid var(--line);
+  color: var(--ink); width: 38px; height: 38px; border-radius: var(--radius); font-size: 18px;
+}
+.btn-ghost:hover { border-color: var(--neon); box-shadow: var(--glow); }
+
+/* ---------- Grid of cabinets ---------- */
+.grid {
+  position: relative; z-index: 10;
+  display: grid; gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  max-width: 1280px; margin: 26px auto; padding: 0 20px 40px;
+}
+.cab {
+  position: relative; cursor: pointer; text-align: left;
+  background: linear-gradient(180deg, var(--panel-2), var(--panel));
+  border: 1px solid var(--line); border-radius: var(--radius);
+  overflow: hidden; box-shadow: var(--shadow);
+  transition: transform .14s ease, border-color .14s ease, box-shadow .14s ease;
+}
+.cab:hover { transform: translateY(-4px); border-color: var(--neon); box-shadow: var(--glow), var(--shadow); }
+.cab:focus-visible { outline: 2px solid var(--neon-2); outline-offset: 2px; }
+.cab-screen {
+  aspect-ratio: 4 / 3; display: flex; align-items: center; justify-content: center;
+  background: #04040a; position: relative; overflow: hidden;
+  border-bottom: 1px solid var(--line);
+}
+.cab-screen img { width: 100%; height: 100%; object-fit: cover; image-rendering: pixelated; }
+.cab-screen .placeholder {
+  font-family: "Press Start 2P", monospace; font-size: 11px; line-height: 1.7;
+  color: var(--neon-2); text-align: center; padding: 12px; text-shadow: var(--glow-cyan);
+}
+.cab-screen::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: repeating-linear-gradient(to bottom, rgba(0,0,0,0) 0 2px, rgba(0,0,0,.22) 2px 3px);
+}
+.cab-meta { padding: 10px 12px 12px; }
+.cab-title { font-size: 19px; line-height: 1.1; color: var(--ink); margin: 0 0 6px; }
+.cab-sub { display: flex; gap: 8px; align-items: center; font-size: 15px; color: var(--ink-dim); }
+.badge {
+  font-size: 12px; letter-spacing: .5px; padding: 2px 7px; border-radius: 4px;
+  background: var(--panel); border: 1px solid var(--line); color: var(--neon-3);
+}
+.cab-play {
+  position: absolute; top: 8px; right: 8px; font-family: "Press Start 2P", monospace;
+  font-size: 8px; padding: 5px 8px; border-radius: 4px; color: var(--bg);
+  background: var(--neon); opacity: 0; transform: translateY(-4px); transition: all .14s ease;
+  box-shadow: var(--glow);
+}
+.cab:hover .cab-play { opacity: 1; transform: translateY(0); }
+
+.empty { grid-column: 1/-1; text-align: center; color: var(--ink-dim); padding: 60px 0; font-size: 22px; }
+
+/* ---------- Footer ---------- */
+.footer {
+  position: relative; z-index: 10; text-align: center; color: var(--ink-dim);
+  border-top: 1px solid var(--line); padding: 16px; font-size: 15px;
+}
+.footer .sep { margin: 0 8px; opacity: .5; }
+
+/* ---------- Player ---------- */
+.player {
+  position: fixed; inset: 0; z-index: 9500; background: #000;
+  display: flex; flex-direction: column;
+}
+.player.hidden { display: none; }
+.player-chrome {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  padding: 8px 12px; background: linear-gradient(180deg, #11141f, #0a0c13);
+  border-bottom: 1px solid var(--neon); box-shadow: 0 1px 14px rgba(255,46,136,.4);
+}
+.chrome-right { display: flex; gap: 8px; }
+.chrome-btn {
+  cursor: pointer; font-family: "Press Start 2P", monospace; font-size: 9px;
+  color: var(--ink); background: var(--panel); border: 1px solid var(--line);
+  padding: 8px 10px; border-radius: 6px; letter-spacing: 1px;
+}
+.chrome-btn:hover { border-color: var(--neon); color: var(--neon); box-shadow: var(--glow); }
+.now-playing {
+  font-family: "Press Start 2P", monospace; font-size: 10px; color: var(--neon-2);
+  text-shadow: var(--glow-cyan); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.dos-stage { flex: 1; min-height: 0; position: relative; background: #000; }
+.dos-stage canvas { image-rendering: pixelated; }
+.boot-hint {
+  position: absolute; bottom: 0; left: 0; right: 0; text-align: center;
+  font-family: "Press Start 2P", monospace; font-size: 9px; color: var(--neon-3);
+  padding: 8px; background: rgba(0,0,0,.6); pointer-events: none;
+  animation: blink 1.2s steps(2) infinite;
+}
+.boot-hint.gone { display: none; }
+@keyframes blink { 50% { opacity: .25; } }
+
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+  .cab-title { font-size: 17px; }
+}

@@ -1,0 +1,155 @@
+[
+  {
+    "id": "doom",
+    "title": "DOOM",
+    "year": 1993,
+    "genre": "FPS",
+    "blurb": "id Software's genre-defining shooter. Episode 1: Knee-Deep in the Dead.",
+    "bundle": "./games/doom.jsdos",
+    "art": ""
+  },
+  {
+    "id": "wolf3d",
+    "title": "Wolfenstein 3D",
+    "year": 1992,
+    "genre": "FPS",
+    "blurb": "Escape Castle Wolfenstein. The granddaddy of the first-person shooter.",
+    "bundle": "./games/wolf3d.jsdos",
+    "art": ""
+  },
+  {
+    "id": "rott",
+    "title": "Rise of the Triad",
+    "year": 1994,
+    "genre": "FPS",
+    "blurb": "The HUNT Begins. Ludicrous gibs, dog mode, and the Excalibat.",
+    "bundle": "./games/rott.jsdos",
+    "art": ""
+  },
+  {
+    "id": "blakestone",
+    "title": "Blake Stone: Aliens of Gold",
+    "year": 1993,
+    "genre": "FPS",
+    "blurb": "Wolf3D-engine sci-fi shooter. Hunt Dr. Goldfire across six episodes.",
+    "bundle": "./games/blakestone.jsdos",
+    "art": ""
+  },
+  {
+    "id": "keen4",
+    "title": "Commander Keen 4",
+    "year": 1991,
+    "genre": "Platformer",
+    "blurb": "Secret of the Oracle. Billy Blaze, 8-year-old genius, saves the galaxy.",
+    "bundle": "./games/keen4.jsdos",
+    "art": ""
+  },
+  {
+    "id": "dukeii",
+    "title": "Duke Nukem II",
+    "year": 1993,
+    "genre": "Platformer",
+    "blurb": "Run-and-gun side-scroller. Duke vs. the Rigelatins. Freeware.",
+    "bundle": "./games/dukeii.jsdos",
+    "art": ""
+  },
+  {
+    "id": "hocus",
+    "title": "Hocus Pocus",
+    "year": 1994,
+    "genre": "Platformer",
+    "blurb": "Apprentice wizard blasts through a fantasy world. Apogee shareware.",
+    "bundle": "./games/hocus.jsdos",
+    "art": ""
+  },
+  {
+    "id": "jazz",
+    "title": "Jazz Jackrabbit",
+    "year": 1994,
+    "genre": "Platformer",
+    "blurb": "Epic's blazing-fast run-and-gun. A green rabbit with a blaster.",
+    "bundle": "./games/jazz.jsdos",
+    "art": ""
+  },
+  {
+    "id": "crystalcaves",
+    "title": "Crystal Caves",
+    "year": 1991,
+    "genre": "Platformer",
+    "blurb": "Mylo Steamwitz mines crystals across a hostile galaxy. Apogee shareware.",
+    "bundle": "./games/crystalcaves.jsdos",
+    "art": ""
+  },
+  {
+    "id": "secretagent",
+    "title": "Secret Agent",
+    "year": 1992,
+    "genre": "Platformer",
+    "blurb": "Agent 006 1/2 vs. the Diabolical Society. Apogee shareware.",
+    "bundle": "./games/secretagent.jsdos",
+    "art": ""
+  },
+  {
+    "id": "tyrian",
+    "title": "Tyrian 2000",
+    "year": 1999,
+    "genre": "Shoot-em-up",
+    "blurb": "Gorgeous vertical shmup with a deep weapon-upgrade system. Freeware.",
+    "bundle": "./games/tyrian.jsdos",
+    "art": ""
+  },
+  {
+    "id": "majorstryker",
+    "title": "Major Stryker",
+    "year": 1993,
+    "genre": "Shoot-em-up",
+    "blurb": "Horizontal Apogee shooter in the Defender lineage. Freeware.",
+    "bundle": "./games/majorstryker.jsdos",
+    "art": ""
+  },
+  {
+    "id": "epicpinball",
+    "title": "Epic Pinball",
+    "year": 1993,
+    "genre": "Pinball",
+    "blurb": "Smooth-scrolling pinball with the legendary Android table. Shareware.",
+    "bundle": "./games/epicpinball.jsdos",
+    "art": ""
+  },
+  {
+    "id": "omf2097",
+    "title": "One Must Fall 2097",
+    "year": 1994,
+    "genre": "Fighting",
+    "blurb": "Robot-fighting tournament with upgradable pilots. Epic freeware classic.",
+    "bundle": "./games/omf2097.jsdos",
+    "art": ""
+  },
+  {
+    "id": "wackywheels",
+    "title": "Wacky Wheels",
+    "year": 1994,
+    "genre": "Racing",
+    "blurb": "Apogee's Mario-Kart-style racer with weaponized critters. Shareware.",
+    "bundle": "./games/wackywheels.jsdos",
+    "art": ""
+  },
+  {
+    "id": "scorchedearth",
+    "title": "Scorched Earth",
+    "year": 1991,
+    "genre": "Artillery",
+    "blurb": "\"The Mother of All Games.\" Turn-based tank artillery duels. Freeware.",
+    "bundle": "./games/scorchedearth.jsdos",
+    "art": ""
+  },
+  {
+    "id": "cosmo",
+    "title": "Cosmo's Cosmic Adventure",
+    "year": 1992,
+    "genre": "Platformer",
+    "blurb": "Apogee freeware. A little alien with suction-cup hands. Episode 1.",
+    "bundle": "./games/cosmo.jsdos",
+    "art": ""
+  }
+]

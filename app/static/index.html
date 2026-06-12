@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>DBX ARCADE</title>
+  <meta name="description" content="A 90s DOS arcade in your browser — boot the classics." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet" />
+  <!-- js-dos v8 -->
+  <link rel="stylesheet" href="https://v8.js-dos.com/latest/js-dos.css" />
+  <script src="https://v8.js-dos.com/latest/js-dos.js"></script>
+  <link rel="stylesheet" href="./arcade.css" />
+</head>
+<body>
+  <!-- CRT overlay -->
+  <div class="crt" aria-hidden="true"></div>
+
+  <!-- ===== Arcade landing ===== -->
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">▚▚</span>
+      <h1 class="logo" data-text="DBX ARCADE">DBX ARCADE</h1>
+      <span class="brand-mark">▞▞</span>
+    </div>
+    <p class="tagline">INSERT COIN · 20 DOS CLASSICS · 100% FREEWARE &amp; SHAREWARE</p>
+    <div class="controls">
+      <input id="search" class="search" type="search" placeholder="SEARCH GAMES…" autocomplete="off" spellcheck="false" />
+      <div id="genres" class="genres"></div>
+      <button id="themeToggle" class="btn-ghost" title="Toggle light/dark" aria-label="Toggle theme">◐</button>
+    </div>
+  </header>
+
+  <main id="grid" class="grid" aria-live="polite"></main>
+
+  <footer class="footer">
+    <span id="count">— games —</span>
+    <span class="sep">·</span>
+    <span>Powered by <a href="https://js-dos.com" target="_blank" rel="noopener">js-dos</a> (DOSBox/WASM)</span>
+    <span class="sep">·</span>
+    <span>All titles redistributed under their shareware / freeware licenses</span>
+  </footer>
+
+  <!-- ===== Player overlay ===== -->
+  <div id="player" class="player hidden" role="dialog" aria-modal="true" aria-label="Game player">
+    <div class="player-chrome">
+      <button id="exitBtn" class="chrome-btn" title="Back to arcade (Esc)">◄ EXIT</button>
+      <span id="nowPlaying" class="now-playing">—</span>
+      <div class="chrome-right">
+        <button id="muteBtn" class="chrome-btn" title="Mute / unmute">♪</button>
+        <button id="fsBtn" class="chrome-btn" title="Fullscreen">⛶</button>
+      </div>
+    </div>
+    <div id="dos" class="dos-stage"></div>
+    <div id="bootHint" class="boot-hint">CLICK THE SCREEN TO START · KEYBOARD CONTROLS THE GAME</div>
+  </div>
+
+  <script src="./arcade.js"></script>
+</body>
+</html>
