@@ -77,15 +77,23 @@
     for (const game of list) {
       const cab = document.createElement("button");
       cab.className = "cab";
+      cab.dataset.genre = game.genre || "";
       cab.setAttribute("aria-label", `Play ${game.title}`);
-      const art = game.art
-        ? `<img src="${game.art}" alt="${game.title}" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'placeholder',textContent:'${escapeJs(game.title)}'}))" />`
-        : `<div class="placeholder">${escapeHtml(game.title)}</div>`;
+      const title = escapeHtml(game.title);
+      const screenInner = game.art
+        ? `<img src="${game.art}" alt="${title}" loading="lazy" onerror="this.remove()" />`
+        : `<div class="screen-title">${title}</div>`;
       cab.innerHTML = `
-        <div class="cab-screen">${art}<span class="cab-play">▶ PLAY</span></div>
-        <div class="cab-meta">
-          <p class="cab-title">${escapeHtml(game.title)}</p>
-          <div class="cab-sub"><span class="badge">${escapeHtml(game.genre)}</span><span>${game.year || ""}</span></div>
+        <div class="cab-marquee"><span>${title}</span></div>
+        <div class="cab-screen">
+          ${screenInner}
+          <div class="screen-coin">▸ INSERT COIN</div>
+          <div class="screen-cta">▶ PLAY</div>
+        </div>
+        <div class="cab-deck">
+          <span class="deck-joy"></span>
+          <span class="deck-btns"><i></i><i></i><i></i></span>
+          <span class="deck-label"><b>${escapeHtml(game.genre || "")}</b> · ${game.year || ""}</span>
         </div>`;
       cab.addEventListener("click", () => launch(game));
       grid.appendChild(cab);

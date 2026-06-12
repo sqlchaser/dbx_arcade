@@ -70,17 +70,19 @@ a:hover { text-decoration: underline; }
 .brand-mark { color: var(--neon-2); font-size: 22px; text-shadow: var(--glow-cyan); letter-spacing: -3px; }
 .logo {
   font-family: "Press Start 2P", monospace;
-  font-size: clamp(22px, 5vw, 46px);
+  font-size: clamp(18px, 4.4vw, 42px);
   margin: 0; letter-spacing: 2px;
+  white-space: nowrap;
   color: var(--ink);
-  text-shadow: var(--glow);
-  position: relative;
+  /* chromatic-split neon via layered shadows — no ghost element */
+  text-shadow:
+    -2px 0 var(--neon-2),
+    2px 0 var(--neon),
+    0 0 8px rgba(255, 46, 136, .55),
+    0 0 20px rgba(33, 230, 193, .30);
 }
-.logo::before {
-  content: attr(data-text);
-  position: absolute; left: 2px; top: 0; color: var(--neon-2);
-  opacity: .55; z-index: -1; transform: translate(-2px, 1px);
-  text-shadow: var(--glow-cyan);
+[data-theme="light"] .logo {
+  text-shadow: -1px 0 var(--neon-2), 1px 0 var(--neon);
 }
 .tagline {
   font-family: "Press Start 2P", monospace;
@@ -116,47 +118,127 @@ a:hover { text-decoration: underline; }
 /* ---------- Grid of cabinets ---------- */
 .grid {
   position: relative; z-index: 10;
-  display: grid; gap: 16px;
-  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-  max-width: 1280px; margin: 26px auto; padding: 0 20px 40px;
+  display: grid; gap: 22px;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  max-width: 1320px; margin: 28px auto; padding: 0 22px 48px;
 }
+
+/* ===== Arcade cabinet ===== */
 .cab {
-  position: relative; cursor: pointer; text-align: left;
-  background: linear-gradient(180deg, var(--panel-2), var(--panel));
-  border: 1px solid var(--line); border-radius: var(--radius);
-  overflow: hidden; box-shadow: var(--shadow);
-  transition: transform .14s ease, border-color .14s ease, box-shadow .14s ease;
+  --accent: var(--neon-2);
+  position: relative; cursor: pointer; text-align: center;
+  display: flex; flex-direction: column;
+  background:
+    linear-gradient(180deg, #1c2030 0%, #0e1119 55%, #080a11 100%);
+  border: 1px solid var(--line);
+  border-top: 2px solid color-mix(in srgb, var(--accent) 45%, var(--line));
+  border-radius: 16px 16px 9px 9px;
+  box-shadow: var(--shadow), inset 0 1px 0 rgba(255,255,255,.05);
+  transition: transform .16s ease, border-color .16s ease, box-shadow .16s ease;
 }
-.cab:hover { transform: translateY(-4px); border-color: var(--neon); box-shadow: var(--glow), var(--shadow); }
-.cab:focus-visible { outline: 2px solid var(--neon-2); outline-offset: 2px; }
+/* side art rails — gives the cabinet body its shape */
+.cab::before {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+  box-shadow: inset 7px 0 0 -3px rgba(255,255,255,.035), inset -7px 0 0 -3px rgba(255,255,255,.035);
+}
+.cab:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+  box-shadow: 0 14px 38px rgba(0,0,0,.6),
+              0 0 18px color-mix(in srgb, var(--accent) 55%, transparent);
+}
+.cab:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+/* genre accents */
+.cab[data-genre="FPS"]         { --accent: #ff3b46; }
+.cab[data-genre="Platformer"]  { --accent: #21e6c1; }
+.cab[data-genre="Shoot-em-up"] { --accent: #b06bff; }
+.cab[data-genre="Pinball"]     { --accent: #ffd23f; }
+.cab[data-genre="Fighting"]    { --accent: #ff7a3d; }
+.cab[data-genre="Racing"]      { --accent: #3da5ff; }
+.cab[data-genre="Artillery"]   { --accent: #5fe06a; }
+
+/* marquee — the lit nameplate at the top */
+.cab-marquee {
+  margin: 11px 11px 9px; padding: 9px 7px; border-radius: 7px;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 26%, #11141f), #0a0c13);
+  border: 1px solid color-mix(in srgb, var(--accent) 42%, var(--line));
+  box-shadow: 0 0 14px color-mix(in srgb, var(--accent) 32%, transparent),
+              inset 0 0 9px rgba(0,0,0,.55);
+}
+.cab-marquee span {
+  font-family: "Press Start 2P", monospace; font-size: 10px; line-height: 1.55;
+  color: #fff; text-shadow: 0 0 7px var(--accent);
+  display: block; word-break: break-word;
+}
+
+/* CRT screen */
 .cab-screen {
-  aspect-ratio: 4 / 3; display: flex; align-items: center; justify-content: center;
-  background: #04040a; position: relative; overflow: hidden;
-  border-bottom: 1px solid var(--line);
+  position: relative; margin: 0 13px; aspect-ratio: 4 / 3;
+  border-radius: 9px; overflow: hidden;
+  background: radial-gradient(125% 95% at 50% 32%, color-mix(in srgb, var(--accent) 20%, #04050b), #04050b 72%);
+  border: 2px solid #05060d;
+  box-shadow: inset 0 0 34px rgba(0,0,0,.85), inset 0 0 0 2px rgba(255,255,255,.03);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 9px;
 }
-.cab-screen img { width: 100%; height: 100%; object-fit: cover; image-rendering: pixelated; }
-.cab-screen .placeholder {
-  font-family: "Press Start 2P", monospace; font-size: 11px; line-height: 1.7;
-  color: var(--neon-2); text-align: center; padding: 12px; text-shadow: var(--glow-cyan);
-}
+.cab-screen img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; image-rendering: pixelated; }
+/* scanlines + tube vignette */
 .cab-screen::after {
   content: ""; position: absolute; inset: 0; pointer-events: none;
-  background: repeating-linear-gradient(to bottom, rgba(0,0,0,0) 0 2px, rgba(0,0,0,.22) 2px 3px);
+  background:
+    repeating-linear-gradient(to bottom, rgba(0,0,0,0) 0 2px, rgba(0,0,0,.30) 2px 3px),
+    radial-gradient(125% 125% at 50% 50%, transparent 58%, rgba(0,0,0,.6));
 }
-.cab-meta { padding: 10px 12px 12px; }
-.cab-title { font-size: 19px; line-height: 1.1; color: var(--ink); margin: 0 0 6px; }
-.cab-sub { display: flex; gap: 8px; align-items: center; font-size: 15px; color: var(--ink-dim); }
-.badge {
-  font-size: 12px; letter-spacing: .5px; padding: 2px 7px; border-radius: 4px;
-  background: var(--panel); border: 1px solid var(--line); color: var(--neon-3);
+.screen-title {
+  z-index: 1; font-family: "Press Start 2P", monospace; font-size: 12px; line-height: 1.65;
+  color: var(--accent); padding: 0 12px;
+  text-shadow: 0 0 11px color-mix(in srgb, var(--accent) 75%, transparent);
 }
-.cab-play {
-  position: absolute; top: 8px; right: 8px; font-family: "Press Start 2P", monospace;
-  font-size: 8px; padding: 5px 8px; border-radius: 4px; color: var(--bg);
-  background: var(--neon); opacity: 0; transform: translateY(-4px); transition: all .14s ease;
-  box-shadow: var(--glow);
+.screen-coin {
+  z-index: 1; font-family: "Press Start 2P", monospace; font-size: 7px; letter-spacing: 1px;
+  color: var(--accent); opacity: .72; animation: blink 1.2s steps(2) infinite;
 }
-.cab:hover .cab-play { opacity: 1; transform: translateY(0); }
+.screen-cta {
+  position: absolute; z-index: 2; bottom: 12px;
+  font-family: "Press Start 2P", monospace; font-size: 8px; letter-spacing: 1px;
+  color: #06070d; background: var(--accent); padding: 6px 10px; border-radius: 5px;
+  opacity: 0; transform: translateY(4px); transition: opacity .15s ease, transform .15s ease;
+  box-shadow: 0 0 16px color-mix(in srgb, var(--accent) 75%, transparent);
+}
+.cab:hover .screen-cta { opacity: 1; transform: translateY(0); }
+.cab:hover .screen-coin { opacity: 0; }
+
+/* control deck — joystick + buttons + player label */
+.cab-deck {
+  display: flex; align-items: center; gap: 9px;
+  margin: 11px 13px 13px; padding: 9px 12px; border-radius: 8px;
+  background: linear-gradient(180deg, #171b2a, #0c0e16);
+  border: 1px solid var(--line);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.06), inset 0 -3px 6px rgba(0,0,0,.4);
+}
+.deck-joy {
+  width: 12px; height: 12px; border-radius: 50%;
+  background: radial-gradient(circle at 50% 35%, #e23b4e, #7a1f29);
+  box-shadow: 0 0 0 3px #11141f, 0 -8px 0 -4px #2a3044, 0 -13px 0 -6px #3a4055;
+  position: relative;
+}
+.deck-joy::before { /* stick */
+  content: ""; position: absolute; left: 50%; top: -11px; width: 3px; height: 11px;
+  background: #2a3044; transform: translateX(-50%); border-radius: 2px;
+}
+.deck-btns { display: flex; gap: 6px; }
+.deck-btns i {
+  width: 11px; height: 11px; border-radius: 50%; display: inline-block;
+  box-shadow: inset 0 -2px 2px rgba(0,0,0,.45), 0 0 7px currentColor;
+}
+.deck-btns i:nth-child(1) { color: #ff3b46; background: #ff3b46; }
+.deck-btns i:nth-child(2) { color: #ffd23f; background: #ffd23f; }
+.deck-btns i:nth-child(3) { color: #21e6c1; background: #21e6c1; }
+.deck-label {
+  margin-left: auto; font-size: 14px; letter-spacing: .5px; color: var(--ink-dim);
+  white-space: nowrap;
+}
+.deck-label b { color: var(--accent); font-weight: 400; }
 
 .empty { grid-column: 1/-1; text-align: center; color: var(--ink-dim); padding: 60px 0; font-size: 22px; }
 
