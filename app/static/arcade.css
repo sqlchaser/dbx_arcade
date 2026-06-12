@@ -15,21 +15,6 @@
   --radius: 10px;
   --shadow: 0 8px 30px rgba(0,0,0,.55);
 }
-[data-theme="light"] {
-  --bg: #eef1f8;
-  --bg-2: #e3e7f2;
-  --panel: #ffffff;
-  --panel-2: #f4f6fc;
-  --ink: #161a28;
-  --ink-dim: #58607a;
-  --line: #d3d9ea;
-  --neon: #d6196f;
-  --neon-2: #0aa890;
-  --neon-3: #c08800;
-  --glow: 0 0 0 transparent;
-  --glow-cyan: 0 0 0 transparent;
-  --shadow: 0 6px 22px rgba(40,50,90,.14);
-}
 
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; height: 100%; }
@@ -56,7 +41,6 @@ a:hover { text-decoration: underline; }
   mix-blend-mode: multiply;
   opacity: .5;
 }
-[data-theme="light"] .crt { opacity: .12; }
 
 /* ---------- Top bar ---------- */
 .topbar {
@@ -80,9 +64,6 @@ a:hover { text-decoration: underline; }
     2px 0 var(--neon),
     0 0 8px rgba(255, 46, 136, .55),
     0 0 20px rgba(33, 230, 193, .30);
-}
-[data-theme="light"] .logo {
-  text-shadow: -1px 0 var(--neon-2), 1px 0 var(--neon);
 }
 .tagline {
   font-family: "Press Start 2P", monospace;
@@ -158,18 +139,54 @@ a:hover { text-decoration: underline; }
 .cab[data-genre="Racing"]      { --accent: #3da5ff; }
 .cab[data-genre="Artillery"]   { --accent: #5fe06a; }
 
-/* marquee — the lit nameplate at the top */
+/* marquee — a backlit plexiglass nameplate (lightbox) in a black bezel */
 .cab-marquee {
-  margin: 11px 11px 9px; padding: 9px 7px; border-radius: 7px;
-  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 26%, #11141f), #0a0c13);
-  border: 1px solid color-mix(in srgb, var(--accent) 42%, var(--line));
-  box-shadow: 0 0 14px color-mix(in srgb, var(--accent) 32%, transparent),
-              inset 0 0 9px rgba(0,0,0,.55);
+  position: relative;
+  margin: 11px 11px 9px;
+  border-radius: 7px;
+  padding: 4px;
+  background: linear-gradient(180deg, #0a0b10, #04050a);  /* black bezel frame */
+  border: 1px solid #05060a;
+  box-shadow: 0 3px 10px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.04);
 }
-.cab-marquee span {
-  font-family: "Press Start 2P", monospace; font-size: 10px; line-height: 1.55;
-  color: #fff; text-shadow: 0 0 7px var(--accent);
-  display: block; word-break: break-word;
+.marquee-light {
+  position: relative; height: 56px; border-radius: 4px; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+  /* illuminated translucent panel: bright core washed with the genre tint */
+  background:
+    radial-gradient(120% 140% at 50% 0%, rgba(255,255,255,.92), transparent 62%),
+    linear-gradient(180deg,
+      color-mix(in srgb, var(--accent) 22%, #f4f5fa) 0%,
+      color-mix(in srgb, var(--accent) 30%, #dfe2ec) 100%);
+  box-shadow:
+    inset 0 0 22px rgba(255,255,255,.7),
+    inset 0 0 0 1px rgba(255,255,255,.4),
+    0 0 16px color-mix(in srgb, var(--accent) 45%, transparent);
+}
+/* fluorescent tube hotspot across the top */
+.marquee-light::before {
+  content: ""; position: absolute; left: 5%; right: 5%; top: 4px; height: 7px;
+  border-radius: 7px; background: rgba(255,255,255,.6); filter: blur(3px);
+}
+/* faint scanline texture so the panel reads as lit glass */
+.marquee-light::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: repeating-linear-gradient(to bottom, rgba(0,0,0,0) 0 3px, rgba(0,0,0,.05) 3px 4px);
+}
+.cab:hover .marquee-light { box-shadow:
+  inset 0 0 26px rgba(255,255,255,.85),
+  inset 0 0 0 1px rgba(255,255,255,.5),
+  0 0 22px color-mix(in srgb, var(--accent) 65%, transparent); }
+.marquee-logo {
+  position: relative; z-index: 1;
+  max-height: 44px; max-width: 86%; object-fit: contain;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,.4));
+}
+.marquee-text {
+  position: relative; z-index: 1; padding: 0 8px;
+  font-family: "Press Start 2P", monospace; font-size: 10px; line-height: 1.5;
+  color: #12141d; text-shadow: 0 1px 0 rgba(255,255,255,.45);
+  word-break: break-word;
 }
 
 /* CRT screen */
@@ -281,6 +298,44 @@ a:hover { text-decoration: underline; }
 }
 .boot-hint.gone { display: none; }
 @keyframes blink { 50% { opacity: .25; } }
+
+/* ---------- Control legend (in player) ---------- */
+.controls-card {
+  position: absolute; top: 62px; right: 14px; z-index: 5; width: min(320px, 78vw);
+  background: rgba(10, 12, 20, .92); backdrop-filter: blur(3px);
+  border: 1px solid var(--neon-2); border-radius: 10px;
+  box-shadow: 0 10px 34px rgba(0,0,0,.6), var(--glow-cyan);
+  overflow: hidden; font-family: "VT323", monospace;
+}
+.controls-card.hidden { display: none; }
+.controls-head {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 9px 12px; background: linear-gradient(180deg, #141826, #0c0e16);
+  border-bottom: 1px solid var(--line);
+  font-family: "Press Start 2P", monospace; font-size: 9px; letter-spacing: 1px; color: var(--neon-2);
+  text-shadow: var(--glow-cyan);
+}
+.controls-close {
+  cursor: pointer; background: transparent; border: none; color: var(--ink-dim);
+  font-size: 16px; line-height: 1; padding: 2px 4px;
+}
+.controls-close:hover { color: var(--neon); }
+.controls-list { padding: 8px 12px; display: flex; flex-direction: column; gap: 6px; max-height: 60vh; overflow-y: auto; }
+.controls-row { display: flex; align-items: center; gap: 10px; }
+.controls-row .keys { flex: 0 0 42%; display: flex; flex-wrap: wrap; gap: 4px; justify-content: flex-start; }
+.controls-row .action { flex: 1; font-size: 17px; line-height: 1.1; color: var(--ink); }
+.keycap {
+  font-family: "VT323", monospace; font-size: 15px; line-height: 1;
+  color: var(--ink); background: linear-gradient(180deg, #2a3044, #1a1f2e);
+  border: 1px solid #3a4055; border-radius: 5px; padding: 3px 7px;
+  box-shadow: 0 2px 0 #05060a, inset 0 1px 0 rgba(255,255,255,.08);
+  white-space: nowrap;
+}
+.kplus { color: var(--ink-dim); font-size: 13px; align-self: center; }
+.controls-foot {
+  padding: 8px 12px; border-top: 1px solid var(--line); font-size: 14px; color: var(--ink-dim);
+}
+.controls-foot b { color: var(--neon-2); font-weight: 400; }
 
 @media (max-width: 560px) {
   body { font-size: 17px; }

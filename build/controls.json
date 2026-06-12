@@ -1,0 +1,534 @@
+{
+  "doom": [
+    {
+      "k": "↑ ↓",
+      "a": "Move forward/back"
+    },
+    {
+      "k": "← →",
+      "a": "Turn left/right"
+    },
+    {
+      "k": "Alt + ← →",
+      "a": "Strafe"
+    },
+    {
+      "k": "Ctrl",
+      "a": "Fire weapon"
+    },
+    {
+      "k": "Space",
+      "a": "Open door / use"
+    },
+    {
+      "k": "Shift",
+      "a": "Run (hold)"
+    },
+    {
+      "k": "1–7",
+      "a": "Select weapon"
+    },
+    {
+      "k": "Tab",
+      "a": "Automap"
+    },
+    {
+      "k": "Esc",
+      "a": "Menu"
+    }
+  ],
+  "wolf3d": [
+    {
+      "k": "↑ ↓",
+      "a": "Move forward/back"
+    },
+    {
+      "k": "← →",
+      "a": "Turn left/right"
+    },
+    {
+      "k": "Alt",
+      "a": "Strafe (hold)"
+    },
+    {
+      "k": "Ctrl",
+      "a": "Fire weapon"
+    },
+    {
+      "k": "Space",
+      "a": "Open door / use"
+    },
+    {
+      "k": "Shift",
+      "a": "Run (hold)"
+    },
+    {
+      "k": "1–4",
+      "a": "Select weapon"
+    },
+    {
+      "k": "Esc",
+      "a": "Menu"
+    }
+  ],
+  "rott": [
+    {
+      "k": "↑ ↓",
+      "a": "Move forward/back"
+    },
+    {
+      "k": "← →",
+      "a": "Turn left/right"
+    },
+    {
+      "k": "Alt",
+      "a": "Strafe (hold)"
+    },
+    {
+      "k": "Ctrl",
+      "a": "Fire weapon"
+    },
+    {
+      "k": "Space",
+      "a": "Open door / use"
+    },
+    {
+      "k": "Shift",
+      "a": "Run (hold)"
+    },
+    {
+      "k": "PgUp / PgDn",
+      "a": "Look up/down"
+    },
+    {
+      "k": "Esc",
+      "a": "Menu"
+    }
+  ],
+  "blakestone": [
+    {
+      "k": "↑ ↓",
+      "a": "Move forward/back"
+    },
+    {
+      "k": "← →",
+      "a": "Turn left/right"
+    },
+    {
+      "k": "Alt",
+      "a": "Strafe (hold)"
+    },
+    {
+      "k": "Ctrl",
+      "a": "Fire weapon"
+    },
+    {
+      "k": "Space",
+      "a": "Open door / use"
+    },
+    {
+      "k": "Shift",
+      "a": "Run (hold)"
+    },
+    {
+      "k": "1–6",
+      "a": "Select weapon"
+    },
+    {
+      "k": "Esc",
+      "a": "Menu"
+    }
+  ],
+  "keen4": [
+    {
+      "k": "← →",
+      "a": "Walk left/right"
+    },
+    {
+      "k": "↑ ↓",
+      "a": "Look / climb"
+    },
+    {
+      "k": "Ctrl",
+      "a": "Jump"
+    },
+    {
+      "k": "Alt",
+      "a": "Pogo"
+    },
+    {
+      "k": "Esc",
+      "a": "Menu"
+    }
+  ],
+  "dukeii": [
+    {
+      "k": "← →",
+      "a": "Walk left/right"
+    },
+    {
+      "k": "↑ ↓",
+      "a": "Look up / crouch"
+    },
+    {
+      "k": "Ctrl",
+      "a": "Jump"
+    },
+    {
+      "k": "Alt",
+      "a": "Fire weapon"
+    },
+    {
+      "k": "Esc",
+      "a": "Menu"
+    }
+  ],
+  "cosmo": [
+    {
+      "k": "← →",
+      "a": "Walk left/right"
+    },
+    {
+      "k": "↑ ↓",
+      "a": "Look up/down"
+    },
+    {
+      "k": "Ctrl",
+      "a": "Jump"
+    },
+    {
+      "k": "Alt",
+      "a": "Drop bomb"
+    },
+    {
+      "k": "Esc",
+      "a": "Menu"
+    }
+  ],
+  "hocus": [
+    {
+      "k": "← →",
+      "a": "Walk left/right"
+    },
+    {
+      "k": "↑ ↓",
+      "a": "Look / climb"
+    },
+    {
+      "k": "Ctrl",
+      "a": "Jump"
+    },
+    {
+      "k": "Alt",
+      "a": "Shoot"
+    },
+    {
+      "k": "Esc",
+      "a": "Menu"
+    }
+  ],
+  "jazz": [
+    {
+      "k": "← →",
+      "a": "Run left/right"
+    },
+    {
+      "k": "↑",
+      "a": "Look up"
+    },
+    {
+      "k": "Ctrl",
+      "a": "Jump"
+    },
+    {
+      "k": "Space",
+      "a": "Shoot"
+    },
+    {
+      "k": "Enter",
+      "a": "Run (hold)"
+    },
+    {
+      "k": "Esc",
+      "a": "Menu"
+    }
+  ],
+  "crystalcaves": [
+    {
+      "k": "← →",
+      "a": "Walk left/right"
+    },
+    {
+      "k": "Ctrl",
+      "a": "Jump"
+    },
+    {
+      "k": "Alt",
+      "a": "Fire pistol / use"
+    },
+    {
+      "k": "Esc",
+      "a": "Menu"
+    }
+  ],
+  "secretagent": [
+    {
+      "k": "← →",
+      "a": "Walk left/right"
+    },
+    {
+      "k": "Ctrl",
+      "a": "Jump"
+    },
+    {
+      "k": "Alt",
+      "a": "Fire / use"
+    },
+    {
+      "k": "Esc",
+      "a": "Menu"
+    }
+  ],
+  "tyrian": [
+    {
+      "k": "← → ↑ ↓",
+      "a": "Move ship"
+    },
+    {
+      "k": "Space",
+      "a": "Fire weapon"
+    },
+    {
+      "k": "Enter",
+      "a": "Change rear mode"
+    },
+    {
+      "k": "Ctrl",
+      "a": "Fire left sidekick"
+    },
+    {
+      "k": "Alt",
+      "a": "Fire right sidekick"
+    },
+    {
+      "k": "Esc",
+      "a": "Menu / pause"
+    }
+  ],
+  "majorstryker": [
+    {
+      "k": "← → ↑ ↓",
+      "a": "Move ship"
+    },
+    {
+      "k": "Alt",
+      "a": "Fire weapon"
+    },
+    {
+      "k": "Space",
+      "a": "Zap bomb"
+    },
+    {
+      "k": "Esc",
+      "a": "Menu"
+    }
+  ],
+  "epicpinball": [
+    {
+      "k": "Shift",
+      "a": "Flippers (L/R)"
+    },
+    {
+      "k": "Space",
+      "a": "Launch ball (plunger)"
+    },
+    {
+      "k": "Z / /",
+      "a": "Nudge table"
+    },
+    {
+      "k": "F2",
+      "a": "New game"
+    },
+    {
+      "k": "Esc",
+      "a": "Menu / quit"
+    }
+  ],
+  "omf2097": [
+    {
+      "k": "← →",
+      "a": "Walk / turn"
+    },
+    {
+      "k": "↑",
+      "a": "Jump"
+    },
+    {
+      "k": "↓",
+      "a": "Crouch"
+    },
+    {
+      "k": "Enter",
+      "a": "Punch"
+    },
+    {
+      "k": "Right Shift",
+      "a": "Kick"
+    },
+    {
+      "k": "Esc",
+      "a": "Menu"
+    }
+  ],
+  "wackywheels": [
+    {
+      "k": "← →",
+      "a": "Steer left/right"
+    },
+    {
+      "k": "Alt",
+      "a": "Accelerate"
+    },
+    {
+      "k": "Shift",
+      "a": "Brake / reverse"
+    },
+    {
+      "k": "Ctrl",
+      "a": "Fire item"
+    },
+    {
+      "k": "Esc",
+      "a": "Menu"
+    }
+  ],
+  "scorchedearth": [
+    {
+      "k": "← →",
+      "a": "Adjust angle"
+    },
+    {
+      "k": "↑ ↓",
+      "a": "Adjust power"
+    },
+    {
+      "k": "Space",
+      "a": "Fire"
+    },
+    {
+      "k": "Ctrl",
+      "a": "Change weapon"
+    },
+    {
+      "k": "Esc",
+      "a": "Menu"
+    }
+  ],
+  "heretic": [
+    {
+      "k": "↑ ↓",
+      "a": "Move forward/back"
+    },
+    {
+      "k": "← →",
+      "a": "Turn left/right"
+    },
+    {
+      "k": "Alt + ← →",
+      "a": "Strafe"
+    },
+    {
+      "k": "Ctrl",
+      "a": "Fire weapon"
+    },
+    {
+      "k": "Space",
+      "a": "Open door / use"
+    },
+    {
+      "k": "Shift",
+      "a": "Run (hold)"
+    },
+    {
+      "k": "1–8",
+      "a": "Select weapon"
+    },
+    {
+      "k": "Enter",
+      "a": "Use artifact"
+    },
+    {
+      "k": "[ ]",
+      "a": "Cycle inventory"
+    },
+    {
+      "k": "PgUp / Ins",
+      "a": "Fly up"
+    },
+    {
+      "k": "Del / PgDn",
+      "a": "Fly down"
+    }
+  ],
+  "descent": [
+    {
+      "k": "← →",
+      "a": "Turn left/right"
+    },
+    {
+      "k": "↑ ↓",
+      "a": "Pitch up/down"
+    },
+    {
+      "k": "Alt + ← → ↑ ↓",
+      "a": "Slide"
+    },
+    {
+      "k": "A / Z",
+      "a": "Accelerate / reverse"
+    },
+    {
+      "k": "Ctrl",
+      "a": "Fire primary"
+    },
+    {
+      "k": "Space",
+      "a": "Fire secondary"
+    },
+    {
+      "k": "F",
+      "a": "Drop flare"
+    },
+    {
+      "k": "Tab",
+      "a": "Automap"
+    },
+    {
+      "k": "Esc",
+      "a": "Menu"
+    }
+  ],
+  "raptor": [
+    {
+      "k": "← → ↑ ↓",
+      "a": "Move ship"
+    },
+    {
+      "k": "Ctrl",
+      "a": "Fire weapon"
+    },
+    {
+      "k": "Space",
+      "a": "Change weapon"
+    },
+    {
+      "k": "Enter",
+      "a": "Special / mega bomb"
+    },
+    {
+      "k": "Esc",
+      "a": "Menu"
+    }
+  ]
+}

@@ -11,6 +11,9 @@
   const dosEl = $("#dos");
   const nowPlaying = $("#nowPlaying");
   const bootHint = $("#bootHint");
+  const controlsCard = $("#controls");
+  const controlsListEl = $("#controlsList");
+  const ctrlBtn = $("#ctrlBtn");
 
   let CATALOG = [];
   let activeGenre = "ALL";
@@ -19,16 +22,6 @@
   // ---- js-dos player handle ----
   let dosProps = null;   // returned by Dos()
   let muted = false;
-
-  // -------- Theme --------
-  const themeToggle = $("#themeToggle");
-  const savedTheme = localStorage.getItem("dbxarcade-theme");
-  if (savedTheme) document.documentElement.setAttribute("data-theme", savedTheme);
-  themeToggle.addEventListener("click", () => {
-    const cur = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
-    document.documentElement.setAttribute("data-theme", cur);
-    localStorage.setItem("dbxarcade-theme", cur);
-  });
 
   // -------- Load catalog --------
   async function init() {
@@ -83,8 +76,13 @@
       const screenInner = game.art
         ? `<img src="${game.art}" alt="${title}" loading="lazy" onerror="this.remove()" />`
         : `<div class="screen-title">${title}</div>`;
+      const logoFallback = `this.replaceWith(Object.assign(document.createElement('span'),{className:'marquee-text',textContent:'${escapeJs(game.title)}'}))`;
       cab.innerHTML = `
-        <div class="cab-marquee"><span>${title}</span></div>
+        <div class="cab-marquee">
+          <div class="marquee-light">
+            <img class="marquee-logo" src="./art/${game.id}.png" alt="${title}" onerror="${logoFallback}" />
+          </div>
+        </div>
         <div class="cab-screen">
           ${screenInner}
           <div class="screen-coin">▸ INSERT COIN</div>
@@ -106,6 +104,7 @@
     playerEl.classList.remove("hidden");
     bootHint.classList.remove("gone");
     document.body.style.overflow = "hidden";
+    renderControls(game);           // populate + show the keyboard legend on launch
 
     await stopGame(); // clean any previous instance
 
@@ -129,9 +128,30 @@
       nowPlaying.textContent = "Failed to boot — " + e;
     }
 
-    // hide the "click to start" hint after first interaction
-    const dismiss = () => { bootHint.classList.add("gone"); dosEl.removeEventListener("pointerdown", dismiss); };
+    // hide the "click to start" hint (and tuck the legend away) after first interaction
+    const dismiss = () => {
+      bootHint.classList.add("gone");
+      controlsCard.classList.add("hidden");
+      dosEl.removeEventListener("pointerdown", dismiss);
+    };
     dosEl.addEventListener("pointerdown", dismiss);
+  }
+
+  function renderControls(game) {
+    const ctrls = Array.isArray(game.controls) ? game.controls : [];
+    if (!ctrls.length) {
+      ctrlBtn.style.display = "none";
+      controlsCard.classList.add("hidden");
+      return;
+    }
+    ctrlBtn.style.display = "";
+    controlsListEl.innerHTML = ctrls.map((c) => {
+      const caps = String(c.k).split(" + ")
+        .map((p) => `<span class="keycap">${escapeHtml(p)}</span>`)
+        .join('<span class="kplus">+</span>');
+      return `<div class="controls-row"><span class="keys">${caps}</span><span class="action">${escapeHtml(c.a)}</span></div>`;
+    }).join("");
+    controlsCard.classList.remove("hidden");   // auto-show the legend on launch
   }
 
   async function stopGame() {
@@ -155,6 +175,10 @@
     try { dosProps && dosProps.setVolume(muted ? 0 : 1); } catch (_) {}
     e.currentTarget.textContent = muted ? "🔇" : "♪";
   });
+  ctrlBtn.addEventListener("click", () => controlsCard.classList.toggle("hidden"));
+  $("#ctrlClose").addEventListener("click", () => controlsCard.classList.add("hidden"));
+  // interacting with the legend must not start/dismiss the game underneath it
+  controlsCard.addEventListener("pointerdown", (e) => e.stopPropagation());
 
   // -------- Keyboard / search --------
   document.addEventListener("keydown", (e) => {

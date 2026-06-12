@@ -28,7 +28,6 @@
     <div class="controls">
       <input id="search" class="search" type="search" placeholder="SEARCH GAMES…" autocomplete="off" spellcheck="false" />
       <div id="genres" class="genres"></div>
-      <button id="themeToggle" class="btn-ghost" title="Toggle light/dark" aria-label="Toggle theme">◐</button>
     </div>
   </header>
 
@@ -48,11 +47,17 @@
       <button id="exitBtn" class="chrome-btn" title="Back to arcade (Esc)">◄ EXIT</button>
       <span id="nowPlaying" class="now-playing">—</span>
       <div class="chrome-right">
+        <button id="ctrlBtn" class="chrome-btn" title="Show / hide controls">⌨ CONTROLS</button>
         <button id="muteBtn" class="chrome-btn" title="Mute / unmute">♪</button>
         <button id="fsBtn" class="chrome-btn" title="Fullscreen">⛶</button>
       </div>
     </div>
     <div id="dos" class="dos-stage"></div>
+    <aside id="controls" class="controls-card hidden" aria-label="Keyboard controls">
+      <div class="controls-head"><span>KEYBOARD CONTROLS</span><button id="ctrlClose" class="controls-close" title="Hide (⌨)">✕</button></div>
+      <div id="controlsList" class="controls-list"></div>
+      <div class="controls-foot">Original DOS defaults · press <b>⌨ CONTROLS</b> anytime</div>
+    </aside>
     <div id="bootHint" class="boot-hint">CLICK THE SCREEN TO START · KEYBOARD CONTROLS THE GAME</div>
   </div>
 

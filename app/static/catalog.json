@@ -6,7 +6,44 @@
     "genre": "FPS",
     "blurb": "id Software's genre-defining shooter. Episode 1: Knee-Deep in the Dead.",
     "bundle": "./games/doom.jsdos",
-    "art": ""
+    "controls": [
+      {
+        "k": "↑ ↓",
+        "a": "Move forward/back"
+      },
+      {
+        "k": "← →",
+        "a": "Turn left/right"
+      },
+      {
+        "k": "Alt + ← →",
+        "a": "Strafe"
+      },
+      {
+        "k": "Ctrl",
+        "a": "Fire weapon"
+      },
+      {
+        "k": "Space",
+        "a": "Open door / use"
+      },
+      {
+        "k": "Shift",
+        "a": "Run (hold)"
+      },
+      {
+        "k": "1–7",
+        "a": "Select weapon"
+      },
+      {
+        "k": "Tab",
+        "a": "Automap"
+      },
+      {
+        "k": "Esc",
+        "a": "Menu"
+      }
+    ]
   },
   {
     "id": "wolf3d",
@@ -15,7 +52,40 @@
     "genre": "FPS",
     "blurb": "Escape Castle Wolfenstein. The granddaddy of the first-person shooter.",
     "bundle": "./games/wolf3d.jsdos",
-    "art": ""
+    "controls": [
+      {
+        "k": "↑ ↓",
+        "a": "Move forward/back"
+      },
+      {
+        "k": "← →",
+        "a": "Turn left/right"
+      },
+      {
+        "k": "Alt",
+        "a": "Strafe (hold)"
+      },
+      {
+        "k": "Ctrl",
+        "a": "Fire weapon"
+      },
+      {
+        "k": "Space",
+        "a": "Open door / use"
+      },
+      {
+        "k": "Shift",
+        "a": "Run (hold)"
+      },
+      {
+        "k": "1–4",
+        "a": "Select weapon"
+      },
+      {
+        "k": "Esc",
+        "a": "Menu"
+      }
+    ]
   },
   {
     "id": "rott",
@@ -24,7 +94,40 @@
     "genre": "FPS",
     "blurb": "The HUNT Begins. Ludicrous gibs, dog mode, and the Excalibat.",
     "bundle": "./games/rott.jsdos",
-    "art": ""
+    "controls": [
+      {
+        "k": "↑ ↓",
+        "a": "Move forward/back"
+      },
+      {
+        "k": "← →",
+        "a": "Turn left/right"
+      },
+      {
+        "k": "Alt",
+        "a": "Strafe (hold)"
+      },
+      {
+        "k": "Ctrl",
+        "a": "Fire weapon"
+      },
+      {
+        "k": "Space",
+        "a": "Open door / use"
+      },
+      {
+        "k": "Shift",
+        "a": "Run (hold)"
+      },
+      {
+        "k": "PgUp / PgDn",
+        "a": "Look up/down"
+      },
+      {
+        "k": "Esc",
+        "a": "Menu"
+      }
+    ]
   },
   {
     "id": "blakestone",
@@ -33,7 +136,40 @@
     "genre": "FPS",
     "blurb": "Wolf3D-engine sci-fi shooter. Hunt Dr. Goldfire across six episodes.",
     "bundle": "./games/blakestone.jsdos",
-    "art": ""
+    "controls": [
+      {
+        "k": "↑ ↓",
+        "a": "Move forward/back"
+      },
+      {
+        "k": "← →",
+        "a": "Turn left/right"
+      },
+      {
+        "k": "Alt",
+        "a": "Strafe (hold)"
+      },
+      {
+        "k": "Ctrl",
+        "a": "Fire weapon"
+      },
+      {
+        "k": "Space",
+        "a": "Open door / use"
+      },
+      {
+        "k": "Shift",
+        "a": "Run (hold)"
+      },
+      {
+        "k": "1–6",
+        "a": "Select weapon"
+      },
+      {
+        "k": "Esc",
+        "a": "Menu"
+      }
+    ]
   },
   {
     "id": "keen4",
@@ -42,7 +178,28 @@
     "genre": "Platformer",
     "blurb": "Secret of the Oracle. Billy Blaze, 8-year-old genius, saves the galaxy.",
     "bundle": "./games/keen4.jsdos",
-    "art": ""
+    "controls": [
+      {
+        "k": "← →",
+        "a": "Walk left/right"
+      },
+      {
+        "k": "↑ ↓",
+        "a": "Look / climb"
+      },
+      {
+        "k": "Ctrl",
+        "a": "Jump"
+      },
+      {
+        "k": "Alt",
+        "a": "Pogo"
+      },
+      {
+        "k": "Esc",
+        "a": "Menu"
+      }
+    ]
   },
   {
     "id": "dukeii",
@@ -51,97 +208,28 @@
     "genre": "Platformer",
     "blurb": "Run-and-gun side-scroller. Duke vs. the Rigelatins. Freeware.",
     "bundle": "./games/dukeii.jsdos",
-    "art": ""
-  },
-  {
-    "id": "hocus",
-    "title": "Hocus Pocus",
-    "year": 1994,
-    "genre": "Platformer",
-    "blurb": "Apprentice wizard blasts through a fantasy world. Apogee shareware.",
-    "bundle": "./games/hocus.jsdos",
-    "art": ""
-  },
-  {
-    "id": "jazz",
-    "title": "Jazz Jackrabbit",
-    "year": 1994,
-    "genre": "Platformer",
-    "blurb": "Epic's blazing-fast run-and-gun. A green rabbit with a blaster.",
-    "bundle": "./games/jazz.jsdos",
-    "art": ""
-  },
-  {
-    "id": "crystalcaves",
-    "title": "Crystal Caves",
-    "year": 1991,
-    "genre": "Platformer",
-    "blurb": "Mylo Steamwitz mines crystals across a hostile galaxy. Apogee shareware.",
-    "bundle": "./games/crystalcaves.jsdos",
-    "art": ""
-  },
-  {
-    "id": "secretagent",
-    "title": "Secret Agent",
-    "year": 1992,
-    "genre": "Platformer",
-    "blurb": "Agent 006 1/2 vs. the Diabolical Society. Apogee shareware.",
-    "bundle": "./games/secretagent.jsdos",
-    "art": ""
-  },
-  {
-    "id": "tyrian",
-    "title": "Tyrian 2000",
-    "year": 1999,
-    "genre": "Shoot-em-up",
-    "blurb": "Gorgeous vertical shmup with a deep weapon-upgrade system. Freeware.",
-    "bundle": "./games/tyrian.jsdos",
-    "art": ""
-  },
-  {
-    "id": "majorstryker",
-    "title": "Major Stryker",
-    "year": 1993,
-    "genre": "Shoot-em-up",
-    "blurb": "Horizontal Apogee shooter in the Defender lineage. Freeware.",
-    "bundle": "./games/majorstryker.jsdos",
-    "art": ""
-  },
-  {
-    "id": "epicpinball",
-    "title": "Epic Pinball",
-    "year": 1993,
-    "genre": "Pinball",
-    "blurb": "Smooth-scrolling pinball with the legendary Android table. Shareware.",
-    "bundle": "./games/epicpinball.jsdos",
-    "art": ""
-  },
-  {
-    "id": "omf2097",
-    "title": "One Must Fall 2097",
-    "year": 1994,
-    "genre": "Fighting",
-    "blurb": "Robot-fighting tournament with upgradable pilots. Epic freeware classic.",
-    "bundle": "./games/omf2097.jsdos",
-    "art": ""
-  },
-  {
-    "id": "wackywheels",
-    "title": "Wacky Wheels",
-    "year": 1994,
-    "genre": "Racing",
-    "blurb": "Apogee's Mario-Kart-style racer with weaponized critters. Shareware.",
-    "bundle": "./games/wackywheels.jsdos",
-    "art": ""
-  },
-  {
-    "id": "scorchedearth",
-    "title": "Scorched Earth",
-    "year": 1991,
-    "genre": "Artillery",
-    "blurb": "\"The Mother of All Games.\" Turn-based tank artillery duels. Freeware.",
-    "bundle": "./games/scorchedearth.jsdos",
-    "art": ""
+    "controls": [
+      {
+        "k": "← →",
+        "a": "Walk left/right"
+      },
+      {
+        "k": "↑ ↓",
+        "a": "Look up / crouch"
+      },
+      {
+        "k": "Ctrl",
+        "a": "Jump"
+      },
+      {
+        "k": "Alt",
+        "a": "Fire weapon"
+      },
+      {
+        "k": "Esc",
+        "a": "Menu"
+      }
+    ]
   },
   {
     "id": "cosmo",
@@ -150,7 +238,328 @@
     "genre": "Platformer",
     "blurb": "Apogee freeware. A little alien with suction-cup hands. Episode 1.",
     "bundle": "./games/cosmo.jsdos",
-    "art": ""
+    "controls": [
+      {
+        "k": "← →",
+        "a": "Walk left/right"
+      },
+      {
+        "k": "↑ ↓",
+        "a": "Look up/down"
+      },
+      {
+        "k": "Ctrl",
+        "a": "Jump"
+      },
+      {
+        "k": "Alt",
+        "a": "Drop bomb"
+      },
+      {
+        "k": "Esc",
+        "a": "Menu"
+      }
+    ]
+  },
+  {
+    "id": "hocus",
+    "title": "Hocus Pocus",
+    "year": 1994,
+    "genre": "Platformer",
+    "blurb": "Apprentice wizard blasts through a fantasy world. Apogee shareware.",
+    "bundle": "./games/hocus.jsdos",
+    "controls": [
+      {
+        "k": "← →",
+        "a": "Walk left/right"
+      },
+      {
+        "k": "↑ ↓",
+        "a": "Look / climb"
+      },
+      {
+        "k": "Ctrl",
+        "a": "Jump"
+      },
+      {
+        "k": "Alt",
+        "a": "Shoot"
+      },
+      {
+        "k": "Esc",
+        "a": "Menu"
+      }
+    ]
+  },
+  {
+    "id": "jazz",
+    "title": "Jazz Jackrabbit",
+    "year": 1994,
+    "genre": "Platformer",
+    "blurb": "Epic's blazing-fast run-and-gun. A green rabbit with a blaster.",
+    "bundle": "./games/jazz.jsdos",
+    "controls": [
+      {
+        "k": "← →",
+        "a": "Run left/right"
+      },
+      {
+        "k": "↑",
+        "a": "Look up"
+      },
+      {
+        "k": "Ctrl",
+        "a": "Jump"
+      },
+      {
+        "k": "Space",
+        "a": "Shoot"
+      },
+      {
+        "k": "Enter",
+        "a": "Run (hold)"
+      },
+      {
+        "k": "Esc",
+        "a": "Menu"
+      }
+    ]
+  },
+  {
+    "id": "crystalcaves",
+    "title": "Crystal Caves",
+    "year": 1991,
+    "genre": "Platformer",
+    "blurb": "Mylo Steamwitz mines crystals across a hostile galaxy. Apogee shareware.",
+    "bundle": "./games/crystalcaves.jsdos",
+    "controls": [
+      {
+        "k": "← →",
+        "a": "Walk left/right"
+      },
+      {
+        "k": "Ctrl",
+        "a": "Jump"
+      },
+      {
+        "k": "Alt",
+        "a": "Fire pistol / use"
+      },
+      {
+        "k": "Esc",
+        "a": "Menu"
+      }
+    ]
+  },
+  {
+    "id": "secretagent",
+    "title": "Secret Agent",
+    "year": 1992,
+    "genre": "Platformer",
+    "blurb": "Agent 006 1/2 vs. the Diabolical Society. Apogee shareware.",
+    "bundle": "./games/secretagent.jsdos",
+    "controls": [
+      {
+        "k": "← →",
+        "a": "Walk left/right"
+      },
+      {
+        "k": "Ctrl",
+        "a": "Jump"
+      },
+      {
+        "k": "Alt",
+        "a": "Fire / use"
+      },
+      {
+        "k": "Esc",
+        "a": "Menu"
+      }
+    ]
+  },
+  {
+    "id": "tyrian",
+    "title": "Tyrian 2000",
+    "year": 1999,
+    "genre": "Shoot-em-up",
+    "blurb": "Gorgeous vertical shmup with a deep weapon-upgrade system. Freeware.",
+    "bundle": "./games/tyrian.jsdos",
+    "controls": [
+      {
+        "k": "← → ↑ ↓",
+        "a": "Move ship"
+      },
+      {
+        "k": "Space",
+        "a": "Fire weapon"
+      },
+      {
+        "k": "Enter",
+        "a": "Change rear mode"
+      },
+      {
+        "k": "Ctrl",
+        "a": "Fire left sidekick"
+      },
+      {
+        "k": "Alt",
+        "a": "Fire right sidekick"
+      },
+      {
+        "k": "Esc",
+        "a": "Menu / pause"
+      }
+    ]
+  },
+  {
+    "id": "majorstryker",
+    "title": "Major Stryker",
+    "year": 1993,
+    "genre": "Shoot-em-up",
+    "blurb": "Horizontal Apogee shooter in the Defender lineage. Freeware.",
+    "bundle": "./games/majorstryker.jsdos",
+    "controls": [
+      {
+        "k": "← → ↑ ↓",
+        "a": "Move ship"
+      },
+      {
+        "k": "Alt",
+        "a": "Fire weapon"
+      },
+      {
+        "k": "Space",
+        "a": "Zap bomb"
+      },
+      {
+        "k": "Esc",
+        "a": "Menu"
+      }
+    ]
+  },
+  {
+    "id": "epicpinball",
+    "title": "Epic Pinball",
+    "year": 1993,
+    "genre": "Pinball",
+    "blurb": "Smooth-scrolling pinball with the legendary Android table. Shareware.",
+    "bundle": "./games/epicpinball.jsdos",
+    "controls": [
+      {
+        "k": "Shift",
+        "a": "Flippers (L/R)"
+      },
+      {
+        "k": "Space",
+        "a": "Launch ball (plunger)"
+      },
+      {
+        "k": "Z / /",
+        "a": "Nudge table"
+      },
+      {
+        "k": "F2",
+        "a": "New game"
+      },
+      {
+        "k": "Esc",
+        "a": "Menu / quit"
+      }
+    ]
+  },
+  {
+    "id": "omf2097",
+    "title": "One Must Fall 2097",
+    "year": 1994,
+    "genre": "Fighting",
+    "blurb": "Robot-fighting tournament with upgradable pilots. Epic freeware classic.",
+    "bundle": "./games/omf2097.jsdos",
+    "controls": [
+      {
+        "k": "← →",
+        "a": "Walk / turn"
+      },
+      {
+        "k": "↑",
+        "a": "Jump"
+      },
+      {
+        "k": "↓",
+        "a": "Crouch"
+      },
+      {
+        "k": "Enter",
+        "a": "Punch"
+      },
+      {
+        "k": "Right Shift",
+        "a": "Kick"
+      },
+      {
+        "k": "Esc",
+        "a": "Menu"
+      }
+    ]
+  },
+  {
+    "id": "wackywheels",
+    "title": "Wacky Wheels",
+    "year": 1994,
+    "genre": "Racing",
+    "blurb": "Apogee's Mario-Kart-style racer with weaponized critters. Shareware.",
+    "bundle": "./games/wackywheels.jsdos",
+    "controls": [
+      {
+        "k": "← →",
+        "a": "Steer left/right"
+      },
+      {
+        "k": "Alt",
+        "a": "Accelerate"
+      },
+      {
+        "k": "Shift",
+        "a": "Brake / reverse"
+      },
+      {
+        "k": "Ctrl",
+        "a": "Fire item"
+      },
+      {
+        "k": "Esc",
+        "a": "Menu"
+      }
+    ]
+  },
+  {
+    "id": "scorchedearth",
+    "title": "Scorched Earth",
+    "year": 1991,
+    "genre": "Artillery",
+    "blurb": "\"The Mother of All Games.\" Turn-based tank artillery duels. Freeware.",
+    "bundle": "./games/scorchedearth.jsdos",
+    "controls": [
+      {
+        "k": "← →",
+        "a": "Adjust angle"
+      },
+      {
+        "k": "↑ ↓",
+        "a": "Adjust power"
+      },
+      {
+        "k": "Space",
+        "a": "Fire"
+      },
+      {
+        "k": "Ctrl",
+        "a": "Change weapon"
+      },
+      {
+        "k": "Esc",
+        "a": "Menu"
+      }
+    ]
   },
   {
     "id": "heretic",
@@ -159,7 +568,52 @@
     "genre": "FPS",
     "blurb": "Raven's dark-fantasy shooter on the DOOM engine. Shareware E1.",
     "bundle": "./games/heretic.jsdos",
-    "art": ""
+    "controls": [
+      {
+        "k": "↑ ↓",
+        "a": "Move forward/back"
+      },
+      {
+        "k": "← →",
+        "a": "Turn left/right"
+      },
+      {
+        "k": "Alt + ← →",
+        "a": "Strafe"
+      },
+      {
+        "k": "Ctrl",
+        "a": "Fire weapon"
+      },
+      {
+        "k": "Space",
+        "a": "Open door / use"
+      },
+      {
+        "k": "Shift",
+        "a": "Run (hold)"
+      },
+      {
+        "k": "1–8",
+        "a": "Select weapon"
+      },
+      {
+        "k": "Enter",
+        "a": "Use artifact"
+      },
+      {
+        "k": "[ ]",
+        "a": "Cycle inventory"
+      },
+      {
+        "k": "PgUp / Ins",
+        "a": "Fly up"
+      },
+      {
+        "k": "Del / PgDn",
+        "a": "Fly down"
+      }
+    ]
   },
   {
     "id": "descent",
@@ -168,7 +622,44 @@
     "genre": "FPS",
     "blurb": "Six-degrees-of-freedom shooter through mining tunnels. Shareware demo.",
     "bundle": "./games/descent.jsdos",
-    "art": ""
+    "controls": [
+      {
+        "k": "← →",
+        "a": "Turn left/right"
+      },
+      {
+        "k": "↑ ↓",
+        "a": "Pitch up/down"
+      },
+      {
+        "k": "Alt + ← → ↑ ↓",
+        "a": "Slide"
+      },
+      {
+        "k": "A / Z",
+        "a": "Accelerate / reverse"
+      },
+      {
+        "k": "Ctrl",
+        "a": "Fire primary"
+      },
+      {
+        "k": "Space",
+        "a": "Fire secondary"
+      },
+      {
+        "k": "F",
+        "a": "Drop flare"
+      },
+      {
+        "k": "Tab",
+        "a": "Automap"
+      },
+      {
+        "k": "Esc",
+        "a": "Menu"
+      }
+    ]
   },
   {
     "id": "raptor",
@@ -177,6 +668,27 @@
     "genre": "Shoot-em-up",
     "blurb": "Apogee's slick vertical shooter with a between-mission cash shop. Shareware.",
     "bundle": "./games/raptor.jsdos",
-    "art": ""
+    "controls": [
+      {
+        "k": "← → ↑ ↓",
+        "a": "Move ship"
+      },
+      {
+        "k": "Ctrl",
+        "a": "Fire weapon"
+      },
+      {
+        "k": "Space",
+        "a": "Change weapon"
+      },
+      {
+        "k": "Enter",
+        "a": "Special / mega bomb"
+      },
+      {
+        "k": "Esc",
+        "a": "Menu"
+      }
+    ]
   }
 ]

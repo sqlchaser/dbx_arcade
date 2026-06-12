@@ -34,6 +34,7 @@ TEMPLATE_CONF = os.path.join(HERE, "template", "jsdos_dosbox.conf")
 GAMES_DIR = os.path.join(ROOT, "app", "static", "games")
 CATALOG_PATH = os.path.join(ROOT, "app", "static", "catalog.json")
 MANIFEST_PATH = os.path.join(HERE, "manifest.json")
+CONTROLS_PATH = os.path.join(HERE, "controls.json")
 
 EXE_SUFFIXES = (".exe", ".com", ".bat")
 
@@ -162,7 +163,48 @@ def build_one(entry):
     return out_path
 
 
+def regen_catalog():
+    """Rewrite catalog.json from manifest.json + controls.json, no downloads.
+
+    Use for metadata-only changes (controls, blurbs). Only includes games that
+    have a built bundle. The frontend loads logos from ./art/<id>.png directly,
+    so art isn't in the catalog.
+    """
+    with open(MANIFEST_PATH) as f:
+        manifest = json.load(f)
+    controls = {}
+    if os.path.exists(CONTROLS_PATH):
+        with open(CONTROLS_PATH) as f:
+            controls = json.load(f)
+    catalog = []
+    for e in manifest:
+        gid = e["id"]
+        if not os.path.exists(os.path.join(GAMES_DIR, f"{gid}.jsdos")):
+            print(f"  – {gid}: no bundle yet, omitted from catalog")
+            continue
+        entry = {
+            "id": gid,
+            "title": e["title"],
+            "year": e.get("year"),
+            "genre": e.get("genre", "ARCADE"),
+            "blurb": e.get("blurb", ""),
+            "bundle": f"./games/{gid}.jsdos",
+            "controls": controls.get(gid, []),
+        }
+        if e.get("logoDark"):
+            entry["logoDark"] = True
+        catalog.append(entry)
+    with open(CATALOG_PATH, "w") as f:
+        json.dump(catalog, f, indent=2, ensure_ascii=False)
+    have = sum(1 for c in catalog if c["controls"])
+    print(f"Catalog regenerated: {len(catalog)} games ({have} with controls) -> {CATALOG_PATH}")
+
+
 def main():
+    if "--catalog" in sys.argv[1:]:
+        regen_catalog()
+        return
+
     with open(MANIFEST_PATH) as f:
         manifest = json.load(f)
 
