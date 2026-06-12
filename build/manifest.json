@@ -167,10 +167,10 @@
     "genre": "FPS",
     "blurb": "Raven's dark-fantasy shooter on the DOOM engine. Shareware E1.",
     "download_url": "https://archive.org/download/heretic-dos/HERETIC.ZIP",
-    "launch_cmd": "INSTALL.BAT\ncd \\HERETIC\nHERETIC.EXE",
+    "source_dir": "build/_work/heretic/game",
+    "launch_cmd": "HERETIC.EXE",
     "cycles": "max",
-    "needs_install": true,
-    "note": "DEICE self-installer — not click-and-play yet; deferred for build-time extraction."
+    "note": "Shareware E1 (HERETIC1.WAD). Extracted from DEICE self-installer at build time."
   },
   {
     "id": "descent",
@@ -179,10 +179,10 @@
     "genre": "FPS",
     "blurb": "Six-degrees-of-freedom shooter through mining tunnels. Shareware demo.",
     "download_url": "https://archive.org/download/Various_DOS_Abandonware_Ark/Descent%20%281995%29%28Interplay%29.zip",
-    "launch_cmd": "INSTALL.EXE\ndescent.exe",
+    "source_dir": "build/_work/descent/game",
+    "launch_cmd": "DESCENT.EXE",
     "cycles": "max",
-    "needs_install": true,
-    "note": "install.exe + .sow self-installer — deferred for build-time extraction."
+    "note": "3-level shareware demo. DESCENT.EXE = 4GWPRO bound onto DESCENT.UBN at build time; PIG/HOG from multi-volume ARJ."
   },
   {
     "id": "raptor",
@@ -191,8 +191,9 @@
     "genre": "Shoot-em-up",
     "blurb": "Apogee's slick vertical shooter with a between-mission cash shop. Shareware.",
     "download_url": "https://archive.org/download/Apogee-download-pack/Raptor/Raptor_ep1.zip",
-    "launch_cmd": "INSTALL.EXE\ncd \\RAPTOR\nRAPTOR.EXE",
-    "needs_install": true,
-    "note": "Apogee .SHR self-installer — deferred for build-time extraction."
+    "source_dir": "build/_work/raptor/game",
+    "launch_cmd": "RAP.EXE",
+    "cycles": "max",
+    "note": "Shareware ep1. Executable is RAP.EXE + FILE0000/0001.GLB. Extracted from PKLITE .SHR self-installer at build time."
   }
 ]
