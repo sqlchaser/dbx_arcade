@@ -5,4 +5,7 @@ __pycache__/
 .omc/
 build/_work/
 *.log
-*.png
+# local verification screenshots only (NOT game art under app/static/art/)
+/_verify_*.png
+/arcade-*.png
+/screenshot.png
