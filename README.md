@@ -43,6 +43,31 @@ bundle (a zip DOSBox mounts as drive C:) with an `[autoexec]` that launches it.
 python3 build/devserve.py 8731     # http://localhost:8731
 ```
 
+## Deploy (lakebase-1)
+
+```bash
+git push origin main
+databricks repos update 4145598709224067 --branch main --profile fe-vm-cmarler-lakebase-1
+databricks apps deploy dbx-arcade \
+  --source-code-path "/Workspace/Users/chase.marler@databricks.com/dbx_arcade.git/app" \
+  --profile fe-vm-cmarler-lakebase-1
+```
+
+Every file must stay **< 10 MB** (Databricks Apps import limit). The builder's
+`exclude` field drops oversized extras (e.g. ROTT's bundled CD image).
+
+## Sharing it org-wide
+
+Two independent layers gate access — both must be open:
+
+1. **App ACL** (`databricks apps update-permissions dbx-arcade ...`): grant the
+   `users` group `CAN_USE`. This only covers people provisioned to *this* workspace.
+2. **Organization permissions** — a **UI-only** toggle (not exposed in the CLI/API).
+   In the app's *Permissions* dialog, change **Organization permissions** from
+   "Only people with access can use" to the org-wide option ("Anyone in `<org>` can
+   use"). **This is the piece that lets people outside the workspace in** — without
+   it, colleagues get "you don't have access" even though the app is deployed.
+
 ## Performance notes
 
 DOSBox-in-WASM is CPU-bound. Two levers matter most:
