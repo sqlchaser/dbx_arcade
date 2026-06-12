@@ -23,6 +23,56 @@
   let dosProps = null;   // returned by Dos()
   let muted = false;
 
+  // -------- Gamepad / controller support --------
+  // js-dos takes GLFW key codes via ci.sendKeyEvent(code, pressed). We poll the
+  // Gamepad API and translate a standard controller into the keys nearly every
+  // DOS game uses (arrows + Ctrl/Alt/Space/Shift/Enter/Esc).
+  const KBD = { up: 265, down: 264, left: 263, right: 262, ctrl: 341, alt: 342, shift: 340, space: 32, enter: 257, esc: 256 };
+  // standard Gamepad button index -> DOS key
+  const PAD_BUTTONS = {
+    0: KBD.ctrl,   // A  – primary (fire / jump)
+    1: KBD.space,  // B  – use / open / jump
+    2: KBD.alt,    // X  – strafe / secondary
+    3: KBD.shift,  // Y  – run
+    4: KBD.alt,    // LB
+    5: KBD.ctrl,   // RB – fire
+    6: KBD.shift,  // LT
+    7: KBD.ctrl,   // RT – fire
+    8: KBD.esc,    // Back/Select
+    9: KBD.enter,  // Start
+    12: KBD.up, 13: KBD.down, 14: KBD.left, 15: KBD.right, // d-pad
+  };
+  const gamepad = (() => {
+    let ci = null, raf = 0;
+    const held = new Set();
+    const DEAD = 0.5;
+    function setKey(code, pressed) {
+      if (pressed && !held.has(code)) { held.add(code); try { ci && ci.sendKeyEvent(code, true); } catch (_) {} }
+      else if (!pressed && held.has(code)) { held.delete(code); try { ci && ci.sendKeyEvent(code, false); } catch (_) {} }
+    }
+    function poll() {
+      raf = requestAnimationFrame(poll);
+      if (!ci) return;
+      const pads = navigator.getGamepads ? navigator.getGamepads() : [];
+      const want = new Set();
+      for (const p of pads) {
+        if (!p) continue;
+        p.buttons.forEach((b, i) => { if (b.pressed && PAD_BUTTONS[i] != null) want.add(PAD_BUTTONS[i]); });
+        const ax = p.axes[0] || 0, ay = p.axes[1] || 0;
+        if (ax < -DEAD) want.add(KBD.left); else if (ax > DEAD) want.add(KBD.right);
+        if (ay < -DEAD) want.add(KBD.up); else if (ay > DEAD) want.add(KBD.down);
+      }
+      for (const code of [...held]) if (!want.has(code)) setKey(code, false);
+      for (const code of want) setKey(code, true);
+    }
+    return {
+      attach(commandInterface) { ci = commandInterface; if (!raf) poll(); },
+      detach() { for (const code of [...held]) setKey(code, false); ci = null; if (raf) { cancelAnimationFrame(raf); raf = 0; } },
+    };
+  })();
+  let padConnected = false;
+  window.addEventListener("gamepadconnected", () => { padConnected = true; document.body.classList.add("has-pad"); });
+
   // -------- Load catalog --------
   async function init() {
     try {
@@ -73,10 +123,13 @@
       cab.dataset.genre = game.genre || "";
       cab.setAttribute("aria-label", `Play ${game.title}`);
       const title = escapeHtml(game.title);
-      const screenInner = game.art
-        ? `<img src="${game.art}" alt="${title}" loading="lazy" onerror="this.remove()" />`
-        : `<div class="screen-title">${title}</div>`;
       const logoFallback = `this.replaceWith(Object.assign(document.createElement('span'),{className:'marquee-text',textContent:'${escapeJs(game.title)}'}))`;
+      // attract-mode reel (plays on hover) — src is lazy-set on first hover
+      const reelEl = game.reel
+        ? (/\.gif$/i.test(game.reel)
+            ? `<img class="screen-reel" data-src="${game.reel}" alt="" />`
+            : `<video class="screen-reel" data-src="${game.reel}" muted loop playsinline preload="none"></video>`)
+        : "";
       cab.innerHTML = `
         <div class="cab-marquee">
           <div class="marquee-light">
@@ -84,7 +137,8 @@
           </div>
         </div>
         <div class="cab-screen">
-          ${screenInner}
+          ${reelEl}
+          <div class="screen-title">${title}</div>
           <div class="screen-coin">▸ INSERT COIN</div>
           <div class="screen-cta">▶ PLAY</div>
         </div>
@@ -94,8 +148,24 @@
           <span class="deck-label"><b>${escapeHtml(game.genre || "")}</b> · ${game.year || ""}</span>
         </div>`;
       cab.addEventListener("click", () => launch(game));
+      if (game.reel) attachReel(cab);
       grid.appendChild(cab);
     }
+  }
+
+  // Attract-mode reel: load + play the gameplay clip on hover, stop on leave.
+  function attachReel(cab) {
+    const reel = cab.querySelector(".screen-reel");
+    if (!reel) return;
+    cab.addEventListener("pointerenter", () => {
+      if (!reel.getAttribute("src")) reel.setAttribute("src", reel.dataset.src);
+      cab.classList.add("reeling");
+      if (reel.tagName === "VIDEO") reel.play().catch(() => {});
+    });
+    cab.addEventListener("pointerleave", () => {
+      cab.classList.remove("reeling");
+      if (reel.tagName === "VIDEO") { try { reel.pause(); reel.currentTime = 0; } catch (_) {} }
+    });
   }
 
   // -------- Player --------
@@ -118,10 +188,8 @@
         noCloud: true,        // no js-dos cloud account prompts
         autoStart: true,
         kiosk: true,          // hide js-dos own chrome — we provide our own
-        onEvent: (event) => {
-          if (event === "ci-ready" || event === "emu-ready") {
-            // running
-          }
+        onEvent: (event, ci) => {
+          if (event === "ci-ready") gamepad.attach(ci);   // controller -> DOS keys
         },
       });
     } catch (e) {
@@ -145,16 +213,25 @@
       return;
     }
     ctrlBtn.style.display = "";
-    controlsListEl.innerHTML = ctrls.map((c) => {
+    const kbHtml = ctrls.map((c) => {
       const caps = String(c.k).split(" + ")
         .map((p) => `<span class="keycap">${escapeHtml(p)}</span>`)
         .join('<span class="kplus">+</span>');
       return `<div class="controls-row"><span class="keys">${caps}</span><span class="action">${escapeHtml(c.a)}</span></div>`;
     }).join("");
+    // Universal gamepad mapping (same for every game)
+    const padRows = [
+      ["D-Pad / Stick", "Move"], ["A", "Fire / Jump"], ["B", "Use / Open"],
+      ["X", "Strafe / 2nd"], ["Y", "Run"], ["Start", "Enter"], ["Back", "Esc"],
+    ];
+    const padHtml = `<div class="controls-sub">🎮 GAMEPAD</div>` + padRows.map(([k, a]) =>
+      `<div class="controls-row"><span class="keys"><span class="keycap pad">${k}</span></span><span class="action">${a}</span></div>`).join("");
+    controlsListEl.innerHTML = `<div class="controls-sub">⌨ KEYBOARD</div>` + kbHtml + padHtml;
     controlsCard.classList.remove("hidden");   // auto-show the legend on launch
   }
 
   async function stopGame() {
+    gamepad.detach();   // stop polling + release any held keys
     if (dosProps) {
       try { await dosProps.stop(); } catch (_) {}
       dosProps = null;

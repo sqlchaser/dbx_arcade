@@ -32,6 +32,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 TEMPLATE_CONF = os.path.join(HERE, "template", "jsdos_dosbox.conf")
 GAMES_DIR = os.path.join(ROOT, "app", "static", "games")
+REELS_DIR = os.path.join(ROOT, "app", "static", "reels")
 CATALOG_PATH = os.path.join(ROOT, "app", "static", "catalog.json")
 MANIFEST_PATH = os.path.join(HERE, "manifest.json")
 CONTROLS_PATH = os.path.join(HERE, "controls.json")
@@ -193,6 +194,10 @@ def regen_catalog():
         }
         if e.get("logoDark"):
             entry["logoDark"] = True
+        for ext in ("mp4", "webm", "gif"):   # attract-mode reel, if one was sourced
+            if os.path.exists(os.path.join(REELS_DIR, f"{gid}.{ext}")):
+                entry["reel"] = f"./reels/{gid}.{ext}"
+                break
         catalog.append(entry)
     with open(CATALOG_PATH, "w") as f:
         json.dump(catalog, f, indent=2, ensure_ascii=False)

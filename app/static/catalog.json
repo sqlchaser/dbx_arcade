@@ -43,7 +43,8 @@
         "k": "Esc",
         "a": "Menu"
       }
-    ]
+    ],
+    "reel": "./reels/doom.mp4"
   },
   {
     "id": "wolf3d",
@@ -85,7 +86,8 @@
         "k": "Esc",
         "a": "Menu"
       }
-    ]
+    ],
+    "reel": "./reels/wolf3d.mp4"
   },
   {
     "id": "rott",
@@ -199,7 +201,8 @@
         "k": "Esc",
         "a": "Menu"
       }
-    ]
+    ],
+    "reel": "./reels/keen4.mp4"
   },
   {
     "id": "dukeii",
@@ -613,7 +616,8 @@
         "k": "Del / PgDn",
         "a": "Fly down"
       }
-    ]
+    ],
+    "reel": "./reels/heretic.mp4"
   },
   {
     "id": "descent",
