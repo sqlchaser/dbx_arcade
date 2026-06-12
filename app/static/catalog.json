@@ -211,7 +211,7 @@
     "title": "Duke Nukem II",
     "year": 1993,
     "genre": "Platformer",
-    "blurb": "Run-and-gun side-scroller. Duke vs. the Rigelatins. Freeware.",
+    "blurb": "Apogee shareware run-and-gun. Duke vs. the Rigelatins. (Episode 1)",
     "bundle": "./games/dukeii.jsdos",
     "controls": [
       {
@@ -242,7 +242,7 @@
     "title": "Cosmo's Cosmic Adventure",
     "year": 1992,
     "genre": "Platformer",
-    "blurb": "Apogee freeware. A little alien with suction-cup hands. Episode 1.",
+    "blurb": "Apogee shareware. A little alien with suction-cup hands. (Episode 1)",
     "bundle": "./games/cosmo.jsdos",
     "controls": [
       {
