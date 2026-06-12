@@ -129,7 +129,8 @@
         "k": "Esc",
         "a": "Menu"
       }
-    ]
+    ],
+    "reel": "./reels/rott.mp4"
   },
   {
     "id": "blakestone",
@@ -171,7 +172,8 @@
         "k": "Esc",
         "a": "Menu"
       }
-    ]
+    ],
+    "reel": "./reels/blakestone.mp4"
   },
   {
     "id": "keen4",
@@ -232,7 +234,8 @@
         "k": "Esc",
         "a": "Menu"
       }
-    ]
+    ],
+    "reel": "./reels/dukeii.mp4"
   },
   {
     "id": "cosmo",
@@ -262,7 +265,8 @@
         "k": "Esc",
         "a": "Menu"
       }
-    ]
+    ],
+    "reel": "./reels/cosmo.mp4"
   },
   {
     "id": "hocus",
@@ -292,7 +296,8 @@
         "k": "Esc",
         "a": "Menu"
       }
-    ]
+    ],
+    "reel": "./reels/hocus.mp4"
   },
   {
     "id": "jazz",
@@ -326,7 +331,8 @@
         "k": "Esc",
         "a": "Menu"
       }
-    ]
+    ],
+    "reel": "./reels/jazz.mp4"
   },
   {
     "id": "crystalcaves",
@@ -352,7 +358,8 @@
         "k": "Esc",
         "a": "Menu"
       }
-    ]
+    ],
+    "reel": "./reels/crystalcaves.mp4"
   },
   {
     "id": "secretagent",
@@ -378,7 +385,8 @@
         "k": "Esc",
         "a": "Menu"
       }
-    ]
+    ],
+    "reel": "./reels/secretagent.mp4"
   },
   {
     "id": "tyrian",
@@ -412,7 +420,8 @@
         "k": "Esc",
         "a": "Menu / pause"
       }
-    ]
+    ],
+    "reel": "./reels/tyrian.mp4"
   },
   {
     "id": "majorstryker",
@@ -438,7 +447,8 @@
         "k": "Esc",
         "a": "Menu"
       }
-    ]
+    ],
+    "reel": "./reels/majorstryker.mp4"
   },
   {
     "id": "epicpinball",
@@ -468,7 +478,8 @@
         "k": "Esc",
         "a": "Menu / quit"
       }
-    ]
+    ],
+    "reel": "./reels/epicpinball.mp4"
   },
   {
     "id": "omf2097",
@@ -502,7 +513,8 @@
         "k": "Esc",
         "a": "Menu"
       }
-    ]
+    ],
+    "reel": "./reels/omf2097.mp4"
   },
   {
     "id": "wackywheels",
@@ -532,7 +544,8 @@
         "k": "Esc",
         "a": "Menu"
       }
-    ]
+    ],
+    "reel": "./reels/wackywheels.mp4"
   },
   {
     "id": "scorchedearth",
@@ -562,7 +575,8 @@
         "k": "Esc",
         "a": "Menu"
       }
-    ]
+    ],
+    "reel": "./reels/scorchedearth.mp4"
   },
   {
     "id": "heretic",
@@ -663,7 +677,8 @@
         "k": "Esc",
         "a": "Menu"
       }
-    ]
+    ],
+    "reel": "./reels/descent.mp4"
   },
   {
     "id": "raptor",
@@ -693,6 +708,7 @@
         "k": "Esc",
         "a": "Menu"
       }
-    ]
+    ],
+    "reel": "./reels/raptor.mp4"
   }
 ]
