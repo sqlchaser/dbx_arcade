@@ -94,14 +94,52 @@ def collect_game_files(raw_zip_bytes):
     return files
 
 
+def files_from_dir(root):
+    """Walk a local directory into {arcname: bytes}, stripping our own config."""
+    out = {}
+    for dirpath, _dirs, names in os.walk(root):
+        for n in names:
+            full = os.path.join(dirpath, n)
+            arc = os.path.relpath(full, root).replace(os.sep, "/")
+            low = arc.lower()
+            if low in ("dosbox.conf", "dosbox-x.conf") or low.startswith(".jsdos/"):
+                continue
+            with open(full, "rb") as f:
+                out[arc] = f.read()
+    return out
+
+
 def build_one(entry):
     gid = entry["id"]
     out_path = os.path.join(GAMES_DIR, f"{gid}.jsdos")
-    print(f"  • {gid}: downloading {entry['download_url']}")
-    raw = download(entry["download_url"])
-    files = collect_game_files(raw)
+    if entry.get("source_dir"):
+        src = entry["source_dir"]
+        if not os.path.isabs(src):
+            src = os.path.join(ROOT, src)
+        print(f"  • {gid}: packaging local dir {src}")
+        files = files_from_dir(src)
+    elif entry.get("source_zip"):
+        src = entry["source_zip"]
+        if not os.path.isabs(src):
+            src = os.path.join(ROOT, src)
+        print(f"  • {gid}: packaging local zip {src}")
+        with open(src, "rb") as f:
+            files = collect_game_files(f.read())
+    else:
+        print(f"  • {gid}: downloading {entry['download_url']}")
+        raw = download(entry["download_url"])
+        files = collect_game_files(raw)
     if not files:
         raise RuntimeError("no files extracted")
+
+    # Drop unwanted paths (e.g. bundled CD images) — keeps bundles under the
+    # Databricks Apps 10 MB/file import limit. `exclude` is a list of substrings.
+    for pat in entry.get("exclude", []):
+        dropped = [n for n in files if pat.lower() in n.lower()]
+        for n in dropped:
+            del files[n]
+        if dropped:
+            print(f"    – excluded {len(dropped)} file(s) matching '{pat}'")
 
     has_exe = any(n.lower().endswith(EXE_SUFFIXES) for n in files)
     if not has_exe:

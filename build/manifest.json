@@ -27,7 +27,8 @@
     "blurb": "The HUNT Begins. Ludicrous gibs, dog mode, and the Excalibat.",
     "download_url": "https://archive.org/download/msdos_Rise_of_the_Triad_-_The_Hunt_Begins_Deluxe_Edition_1995/Rise_of_the_Triad_-_The_Hunt_Begins_Deluxe_Edition_1995.zip",
     "launch_cmd": "cd RotTDLX\\ROTT\nROTT.EXE",
-    "cycles": "max"
+    "cycles": "max",
+    "exclude": ["RotTDLX/cd/"]
   },
   {
     "id": "blakestone",
