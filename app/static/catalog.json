@@ -710,5 +710,709 @@
       }
     ],
     "reel": "./reels/raptor.mp4"
+  },
+  {
+    "id": "catacomb-abyss",
+    "title": "The Catacomb Abyss",
+    "year": 1992,
+    "genre": "FPS",
+    "blurb": "Raycast first-person shooter from id co-founder John Carmack's Softdisk era; cast spells, blast undead.",
+    "bundle": "./games/catacomb-abyss.jsdos",
+    "controls": [
+      {
+        "k": "← →",
+        "a": "Turn"
+      },
+      {
+        "k": "↑ ↓",
+        "a": "Move"
+      },
+      {
+        "k": "Ctrl",
+        "a": "Fire weapon"
+      },
+      {
+        "k": "Alt + ← →",
+        "a": "Strafe"
+      },
+      {
+        "k": "Space",
+        "a": "Drink potion"
+      },
+      {
+        "k": "B",
+        "a": "Cast bolt"
+      },
+      {
+        "k": "Enter",
+        "a": "Cast nuke"
+      },
+      {
+        "k": "F2",
+        "a": "Control panel"
+      }
+    ],
+    "reel": "./reels/catacomb-abyss.mp4"
+  },
+  {
+    "id": "kens-labyrinth",
+    "title": "Ken's Labyrinth",
+    "year": 1993,
+    "genre": "FPS",
+    "blurb": "Goofy pre-Build-engine raycaster by Ken Silverman (later author of Duke3D's Build engine).",
+    "bundle": "./games/kens-labyrinth.jsdos",
+    "controls": [
+      {
+        "k": "← →",
+        "a": "Turn"
+      },
+      {
+        "k": "↑ ↓",
+        "a": "Move"
+      },
+      {
+        "k": "Ctrl",
+        "a": "Fire weapon"
+      },
+      {
+        "k": "Alt + ← →",
+        "a": "Strafe"
+      },
+      {
+        "k": "Space",
+        "a": "Open door"
+      },
+      {
+        "k": "Shift",
+        "a": "Run"
+      },
+      {
+        "k": "Esc",
+        "a": "Menu"
+      }
+    ],
+    "reel": "./reels/kens-labyrinth.mp4"
+  },
+  {
+    "id": "bio-menace",
+    "title": "Bio Menace",
+    "year": 1993,
+    "genre": "Platformer",
+    "blurb": "Snake Logan vs. mutant-infested Metro City; Keen-engine arcade action by Jim Norwood.",
+    "bundle": "./games/bio-menace.jsdos",
+    "controls": [
+      {
+        "k": "← →",
+        "a": "Move"
+      },
+      {
+        "k": "Ctrl",
+        "a": "Jump"
+      },
+      {
+        "k": "Alt",
+        "a": "Fire weapon"
+      },
+      {
+        "k": "↑",
+        "a": "Look up"
+      },
+      {
+        "k": "↓",
+        "a": "Duck"
+      },
+      {
+        "k": "Space",
+        "a": "Status screen"
+      },
+      {
+        "k": "Esc",
+        "a": "Menu"
+      }
+    ],
+    "reel": "./reels/bio-menace.mp4"
+  },
+  {
+    "id": "god-of-thunder",
+    "title": "God of Thunder",
+    "year": 1993,
+    "genre": "Adventure",
+    "blurb": "Zelda-like top-down puzzle-combat starring Thor, by Ron Davis / Adept (Software Creations).",
+    "bundle": "./games/god-of-thunder.jsdos",
+    "controls": [
+      {
+        "k": "← → ↑ ↓",
+        "a": "Move"
+      },
+      {
+        "k": "Space",
+        "a": "Throw hammer"
+      },
+      {
+        "k": "Ctrl",
+        "a": "Use item"
+      },
+      {
+        "k": "Enter",
+        "a": "Inventory"
+      },
+      {
+        "k": "Esc",
+        "a": "Menu"
+      }
+    ],
+    "reel": "./reels/god-of-thunder.mp4"
+  },
+  {
+    "id": "jill-of-the-jungle",
+    "title": "Jill of the Jungle",
+    "year": 1992,
+    "genre": "Platformer",
+    "blurb": "Epic MegaGames' colorful jungle platformer; transform into a phoenix, frog, and fish.",
+    "bundle": "./games/jill-of-the-jungle.jsdos",
+    "controls": [
+      {
+        "k": "← →",
+        "a": "Move"
+      },
+      {
+        "k": "Ctrl",
+        "a": "Jump"
+      },
+      {
+        "k": "Alt",
+        "a": "Throw knife"
+      },
+      {
+        "k": "↑",
+        "a": "Climb up"
+      },
+      {
+        "k": "↓",
+        "a": "Duck"
+      },
+      {
+        "k": "Space",
+        "a": "Inventory"
+      },
+      {
+        "k": "Esc",
+        "a": "Menu"
+      }
+    ],
+    "reel": "./reels/jill-of-the-jungle.mp4"
+  },
+  {
+    "id": "supaplex",
+    "title": "Supaplex",
+    "year": 1991,
+    "genre": "Puzzle",
+    "blurb": "Collect Infotrons and dodge Zonks/Snik-Snaks across 111 fiendish levels.",
+    "bundle": "./games/supaplex.jsdos",
+    "controls": [
+      {
+        "k": "← → ↑ ↓",
+        "a": "Move"
+      },
+      {
+        "k": "Space + ← →",
+        "a": "Snap item"
+      },
+      {
+        "k": "Space + ↑ ↓",
+        "a": "Snap item"
+      },
+      {
+        "k": "Space",
+        "a": "Drop disk"
+      },
+      {
+        "k": "Enter",
+        "a": "Toggle panel"
+      },
+      {
+        "k": "Esc",
+        "a": "Quit level"
+      }
+    ],
+    "reel": "./reels/supaplex.mp4"
+  },
+  {
+    "id": "realms-of-chaos",
+    "title": "Realms of Chaos",
+    "year": 1995,
+    "genre": "Platformer",
+    "blurb": "Apogee fantasy platformer; switch between warrior Andrew and sorceress Elandra.",
+    "bundle": "./games/realms-of-chaos.jsdos",
+    "controls": [
+      {
+        "k": "← →",
+        "a": "Move"
+      },
+      {
+        "k": "Ctrl",
+        "a": "Jump"
+      },
+      {
+        "k": "Alt",
+        "a": "Fire weapon"
+      },
+      {
+        "k": "Tab",
+        "a": "Switch character"
+      },
+      {
+        "k": "↑ ↓",
+        "a": "Climb"
+      },
+      {
+        "k": "Esc",
+        "a": "Menu"
+      }
+    ],
+    "reel": "./reels/realms-of-chaos.mp4"
+  },
+  {
+    "id": "dark-ages",
+    "title": "Dark Ages",
+    "year": 1991,
+    "genre": "Platformer",
+    "blurb": "Early Apogee EGA platformer trilogy; Prince Garloth battles the wizard Garn.",
+    "bundle": "./games/dark-ages.jsdos",
+    "controls": [
+      {
+        "k": "← →",
+        "a": "Move"
+      },
+      {
+        "k": "Ctrl",
+        "a": "Jump"
+      },
+      {
+        "k": "Alt",
+        "a": "Fire weapon"
+      },
+      {
+        "k": "↑",
+        "a": "Look up"
+      },
+      {
+        "k": "↓",
+        "a": "Duck"
+      },
+      {
+        "k": "Esc",
+        "a": "Menu"
+      }
+    ],
+    "reel": "./reels/dark-ages.mp4"
+  },
+  {
+    "id": "commander-keen-1",
+    "title": "Commander Keen: Marooned on Mars",
+    "year": 1990,
+    "genre": "Platformer",
+    "blurb": "The shareware-era classic that put id Software on the map; 8-year-old Billy Blaze saves Earth.",
+    "bundle": "./games/commander-keen-1.jsdos",
+    "controls": [
+      {
+        "k": "← →",
+        "a": "Move"
+      },
+      {
+        "k": "Ctrl",
+        "a": "Jump"
+      },
+      {
+        "k": "Alt",
+        "a": "Pogo"
+      },
+      {
+        "k": "Ctrl + Alt",
+        "a": "Fire raygun"
+      },
+      {
+        "k": "↑ ↓",
+        "a": "Look / enter"
+      },
+      {
+        "k": "Esc",
+        "a": "Menu"
+      }
+    ],
+    "reel": "./reels/commander-keen-1.mp4"
+  },
+  {
+    "id": "zzt",
+    "title": "ZZT",
+    "year": 1991,
+    "genre": "Adventure",
+    "blurb": "Tim Sweeney's ASCII-graphics adventure and editor — the game that founded Epic MegaGames.",
+    "bundle": "./games/zzt.jsdos",
+    "controls": [
+      {
+        "k": "← → ↑ ↓",
+        "a": "Move"
+      },
+      {
+        "k": "Space",
+        "a": "Shoot"
+      },
+      {
+        "k": "T",
+        "a": "Light torch"
+      },
+      {
+        "k": "P",
+        "a": "Pause"
+      },
+      {
+        "k": "B",
+        "a": "Toggle sound"
+      },
+      {
+        "k": "Esc",
+        "a": "Menu"
+      }
+    ],
+    "reel": "./reels/zzt.mp4"
+  },
+  {
+    "id": "jetpack",
+    "title": "Jetpack",
+    "year": 1993,
+    "genre": "Platformer",
+    "blurb": "Adept Software's jetpack-fueled gem-collector with a built-in level editor.",
+    "bundle": "./games/jetpack.jsdos",
+    "controls": [
+      {
+        "k": "← → ↑ ↓",
+        "a": "Move"
+      },
+      {
+        "k": "Alt",
+        "a": "Jetpack thrust"
+      },
+      {
+        "k": "Ctrl",
+        "a": "Phase shifter"
+      },
+      {
+        "k": "P",
+        "a": "Pause"
+      },
+      {
+        "k": "Esc",
+        "a": "Menu"
+      }
+    ],
+    "reel": "./reels/jetpack.mp4"
+  },
+  {
+    "id": "math-rescue",
+    "title": "Math Rescue",
+    "year": 1992,
+    "genre": "Platformer",
+    "blurb": "Apogee math-learning platformer; recover stolen numbers from the Gruzzles.",
+    "bundle": "./games/math-rescue.jsdos",
+    "controls": [
+      {
+        "k": "← →",
+        "a": "Move"
+      },
+      {
+        "k": "Ctrl",
+        "a": "Jump"
+      },
+      {
+        "k": "Space",
+        "a": "Fire shot"
+      },
+      {
+        "k": "↑ ↓",
+        "a": "Climb"
+      },
+      {
+        "k": "Esc",
+        "a": "Menu"
+      }
+    ],
+    "reel": "./reels/math-rescue.mp4"
+  },
+  {
+    "id": "word-rescue",
+    "title": "Word Rescue",
+    "year": 1992,
+    "genre": "Platformer",
+    "blurb": "Companion to Math Rescue; match words to pictures while dodging Gruzzles.",
+    "bundle": "./games/word-rescue.jsdos",
+    "controls": [
+      {
+        "k": "← →",
+        "a": "Move"
+      },
+      {
+        "k": "Ctrl",
+        "a": "Jump"
+      },
+      {
+        "k": "Space",
+        "a": "Fire shot"
+      },
+      {
+        "k": "↑ ↓",
+        "a": "Climb"
+      },
+      {
+        "k": "Esc",
+        "a": "Menu"
+      }
+    ],
+    "reel": "./reels/word-rescue.mp4"
+  },
+  {
+    "id": "xargon",
+    "title": "Xargon",
+    "year": 1994,
+    "genre": "Platformer",
+    "blurb": "Allen Pilgrim's Epic platformer (a Jill-of-the-Jungle successor); explore three worlds as Malvineous.",
+    "bundle": "./games/xargon.jsdos",
+    "controls": [
+      {
+        "k": "← →",
+        "a": "Move"
+      },
+      {
+        "k": "Ctrl",
+        "a": "Jump"
+      },
+      {
+        "k": "Alt",
+        "a": "Throw weapon"
+      },
+      {
+        "k": "↑",
+        "a": "Look up"
+      },
+      {
+        "k": "↓",
+        "a": "Duck"
+      },
+      {
+        "k": "Space",
+        "a": "Inventory"
+      },
+      {
+        "k": "Esc",
+        "a": "Menu"
+      }
+    ],
+    "reel": "./reels/xargon.mp4"
+  },
+  {
+    "id": "monster-bash",
+    "title": "Monster Bash",
+    "year": 1993,
+    "genre": "Platformer",
+    "blurb": "Johnny Dash rescues kidnapped pets from Count Chuck's monster mansion; spooky Apogee platformer.",
+    "bundle": "./games/monster-bash.jsdos",
+    "controls": [
+      {
+        "k": "← →",
+        "a": "Move"
+      },
+      {
+        "k": "Ctrl",
+        "a": "Jump"
+      },
+      {
+        "k": "Alt",
+        "a": "Fire slingshot"
+      },
+      {
+        "k": "↑",
+        "a": "Look up"
+      },
+      {
+        "k": "↓",
+        "a": "Duck"
+      },
+      {
+        "k": "Esc",
+        "a": "Menu"
+      }
+    ],
+    "reel": "./reels/monster-bash.mp4"
+  },
+  {
+    "id": "alien-carnage",
+    "title": "Alien Carnage (Halloween Harry)",
+    "year": 1993,
+    "genre": "Platformer",
+    "blurb": "Flamethrower-toting Harry torches aliens and frees hostages; fast SubZero/Apogee action.",
+    "bundle": "./games/alien-carnage.jsdos",
+    "controls": [
+      {
+        "k": "← →",
+        "a": "Move"
+      },
+      {
+        "k": "↑",
+        "a": "Jetpack fly"
+      },
+      {
+        "k": "↓",
+        "a": "Kneel"
+      },
+      {
+        "k": "Ctrl",
+        "a": "Jump"
+      },
+      {
+        "k": "Alt",
+        "a": "Fire flamethrower"
+      },
+      {
+        "k": "Esc",
+        "a": "Menu"
+      }
+    ],
+    "reel": "./reels/alien-carnage.mp4"
+  },
+  {
+    "id": "pharaohs-tomb",
+    "title": "Pharaoh's Tomb",
+    "year": 1990,
+    "genre": "Platformer",
+    "blurb": "Whip-cracking Nevada Smith raids a booby-trapped tomb; early Apogee George-Broussard title.",
+    "bundle": "./games/pharaohs-tomb.jsdos",
+    "controls": [
+      {
+        "k": "← →",
+        "a": "Move"
+      },
+      {
+        "k": "Ctrl",
+        "a": "Jump"
+      },
+      {
+        "k": "Alt",
+        "a": "Fire weapon"
+      },
+      {
+        "k": "↑ ↓",
+        "a": "Climb"
+      },
+      {
+        "k": "Esc",
+        "a": "Menu"
+      }
+    ],
+    "reel": "./reels/pharaohs-tomb.mp4"
+  },
+  {
+    "id": "boppin",
+    "title": "Boppin'",
+    "year": 1994,
+    "genre": "Puzzle",
+    "blurb": "Quirky block-matching puzzler starring Yeet and Boik; 3D Realms / Accursed Toys.",
+    "bundle": "./games/boppin.jsdos",
+    "controls": [
+      {
+        "k": "← →",
+        "a": "Move"
+      },
+      {
+        "k": "↑ ↓",
+        "a": "Use elevator"
+      },
+      {
+        "k": "Space + ← →",
+        "a": "Aim throw"
+      },
+      {
+        "k": "Space",
+        "a": "Throw block"
+      },
+      {
+        "k": "Esc",
+        "a": "Menu"
+      }
+    ],
+    "reel": "./reels/boppin.mp4"
+  },
+  {
+    "id": "death-rally",
+    "title": "Death Rally",
+    "year": 1996,
+    "genre": "Racing",
+    "blurb": "Remedy's breakthrough debut: weaponized top-down racing with a young Max-Payne-era pedigree.",
+    "bundle": "./games/death-rally.jsdos",
+    "controls": [
+      {
+        "k": "↑",
+        "a": "Accelerate"
+      },
+      {
+        "k": "↓",
+        "a": "Brake reverse"
+      },
+      {
+        "k": "← →",
+        "a": "Steer"
+      },
+      {
+        "k": "Ctrl",
+        "a": "Accelerate"
+      },
+      {
+        "k": "Shift",
+        "a": "Brake reverse"
+      },
+      {
+        "k": "Space",
+        "a": "Fire weapon"
+      },
+      {
+        "k": "Tab",
+        "a": "Change view"
+      },
+      {
+        "k": "R",
+        "a": "Repair pit"
+      }
+    ],
+    "reel": "./reels/death-rally.mp4"
+  },
+  {
+    "id": "captain-comic",
+    "title": "The Adventures of Captain Comic",
+    "year": 1988,
+    "genre": "Platformer",
+    "blurb": "The freeware platformer that inspired Commander Keen; Comic hunts three treasures on Tambi.",
+    "bundle": "./games/captain-comic.jsdos",
+    "controls": [
+      {
+        "k": "← →",
+        "a": "Move"
+      },
+      {
+        "k": "↑",
+        "a": "Jump"
+      },
+      {
+        "k": "Ctrl",
+        "a": "Fire blaster"
+      },
+      {
+        "k": "Space",
+        "a": "Use item"
+      },
+      {
+        "k": "Esc",
+        "a": "Quit"
+      }
+    ],
+    "reel": "./reels/captain-comic.mp4"
   }
 ]

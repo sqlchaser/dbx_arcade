@@ -138,6 +138,8 @@ a:hover { text-decoration: underline; }
 .cab[data-genre="Fighting"]    { --accent: #ff7a3d; }
 .cab[data-genre="Racing"]      { --accent: #3da5ff; }
 .cab[data-genre="Artillery"]   { --accent: #5fe06a; }
+.cab[data-genre="Puzzle"]      { --accent: #ff5bb0; }
+.cab[data-genre="Adventure"]   { --accent: #e0b020; }
 
 /* marquee — a backlit plexiglass nameplate (lightbox) in a black bezel */
 .cab-marquee {

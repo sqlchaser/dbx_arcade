@@ -530,5 +530,529 @@
       "k": "Esc",
       "a": "Menu"
     }
+  ],
+  "catacomb-abyss": [
+    {
+      "k": "← →",
+      "a": "Turn"
+    },
+    {
+      "k": "↑ ↓",
+      "a": "Move"
+    },
+    {
+      "k": "Ctrl",
+      "a": "Fire weapon"
+    },
+    {
+      "k": "Alt + ← →",
+      "a": "Strafe"
+    },
+    {
+      "k": "Space",
+      "a": "Drink potion"
+    },
+    {
+      "k": "B",
+      "a": "Cast bolt"
+    },
+    {
+      "k": "Enter",
+      "a": "Cast nuke"
+    },
+    {
+      "k": "F2",
+      "a": "Control panel"
+    }
+  ],
+  "kens-labyrinth": [
+    {
+      "k": "← →",
+      "a": "Turn"
+    },
+    {
+      "k": "↑ ↓",
+      "a": "Move"
+    },
+    {
+      "k": "Ctrl",
+      "a": "Fire weapon"
+    },
+    {
+      "k": "Alt + ← →",
+      "a": "Strafe"
+    },
+    {
+      "k": "Space",
+      "a": "Open door"
+    },
+    {
+      "k": "Shift",
+      "a": "Run"
+    },
+    {
+      "k": "Esc",
+      "a": "Menu"
+    }
+  ],
+  "bio-menace": [
+    {
+      "k": "← →",
+      "a": "Move"
+    },
+    {
+      "k": "Ctrl",
+      "a": "Jump"
+    },
+    {
+      "k": "Alt",
+      "a": "Fire weapon"
+    },
+    {
+      "k": "↑",
+      "a": "Look up"
+    },
+    {
+      "k": "↓",
+      "a": "Duck"
+    },
+    {
+      "k": "Space",
+      "a": "Status screen"
+    },
+    {
+      "k": "Esc",
+      "a": "Menu"
+    }
+  ],
+  "god-of-thunder": [
+    {
+      "k": "← → ↑ ↓",
+      "a": "Move"
+    },
+    {
+      "k": "Space",
+      "a": "Throw hammer"
+    },
+    {
+      "k": "Ctrl",
+      "a": "Use item"
+    },
+    {
+      "k": "Enter",
+      "a": "Inventory"
+    },
+    {
+      "k": "Esc",
+      "a": "Menu"
+    }
+  ],
+  "jill-of-the-jungle": [
+    {
+      "k": "← →",
+      "a": "Move"
+    },
+    {
+      "k": "Ctrl",
+      "a": "Jump"
+    },
+    {
+      "k": "Alt",
+      "a": "Throw knife"
+    },
+    {
+      "k": "↑",
+      "a": "Climb up"
+    },
+    {
+      "k": "↓",
+      "a": "Duck"
+    },
+    {
+      "k": "Space",
+      "a": "Inventory"
+    },
+    {
+      "k": "Esc",
+      "a": "Menu"
+    }
+  ],
+  "supaplex": [
+    {
+      "k": "← → ↑ ↓",
+      "a": "Move"
+    },
+    {
+      "k": "Space + ← →",
+      "a": "Snap item"
+    },
+    {
+      "k": "Space + ↑ ↓",
+      "a": "Snap item"
+    },
+    {
+      "k": "Space",
+      "a": "Drop disk"
+    },
+    {
+      "k": "Enter",
+      "a": "Toggle panel"
+    },
+    {
+      "k": "Esc",
+      "a": "Quit level"
+    }
+  ],
+  "realms-of-chaos": [
+    {
+      "k": "← →",
+      "a": "Move"
+    },
+    {
+      "k": "Ctrl",
+      "a": "Jump"
+    },
+    {
+      "k": "Alt",
+      "a": "Fire weapon"
+    },
+    {
+      "k": "Tab",
+      "a": "Switch character"
+    },
+    {
+      "k": "↑ ↓",
+      "a": "Climb"
+    },
+    {
+      "k": "Esc",
+      "a": "Menu"
+    }
+  ],
+  "dark-ages": [
+    {
+      "k": "← →",
+      "a": "Move"
+    },
+    {
+      "k": "Ctrl",
+      "a": "Jump"
+    },
+    {
+      "k": "Alt",
+      "a": "Fire weapon"
+    },
+    {
+      "k": "↑",
+      "a": "Look up"
+    },
+    {
+      "k": "↓",
+      "a": "Duck"
+    },
+    {
+      "k": "Esc",
+      "a": "Menu"
+    }
+  ],
+  "commander-keen-1": [
+    {
+      "k": "← →",
+      "a": "Move"
+    },
+    {
+      "k": "Ctrl",
+      "a": "Jump"
+    },
+    {
+      "k": "Alt",
+      "a": "Pogo"
+    },
+    {
+      "k": "Ctrl + Alt",
+      "a": "Fire raygun"
+    },
+    {
+      "k": "↑ ↓",
+      "a": "Look / enter"
+    },
+    {
+      "k": "Esc",
+      "a": "Menu"
+    }
+  ],
+  "zzt": [
+    {
+      "k": "← → ↑ ↓",
+      "a": "Move"
+    },
+    {
+      "k": "Space",
+      "a": "Shoot"
+    },
+    {
+      "k": "T",
+      "a": "Light torch"
+    },
+    {
+      "k": "P",
+      "a": "Pause"
+    },
+    {
+      "k": "B",
+      "a": "Toggle sound"
+    },
+    {
+      "k": "Esc",
+      "a": "Menu"
+    }
+  ],
+  "jetpack": [
+    {
+      "k": "← → ↑ ↓",
+      "a": "Move"
+    },
+    {
+      "k": "Alt",
+      "a": "Jetpack thrust"
+    },
+    {
+      "k": "Ctrl",
+      "a": "Phase shifter"
+    },
+    {
+      "k": "P",
+      "a": "Pause"
+    },
+    {
+      "k": "Esc",
+      "a": "Menu"
+    }
+  ],
+  "math-rescue": [
+    {
+      "k": "← →",
+      "a": "Move"
+    },
+    {
+      "k": "Ctrl",
+      "a": "Jump"
+    },
+    {
+      "k": "Space",
+      "a": "Fire shot"
+    },
+    {
+      "k": "↑ ↓",
+      "a": "Climb"
+    },
+    {
+      "k": "Esc",
+      "a": "Menu"
+    }
+  ],
+  "word-rescue": [
+    {
+      "k": "← →",
+      "a": "Move"
+    },
+    {
+      "k": "Ctrl",
+      "a": "Jump"
+    },
+    {
+      "k": "Space",
+      "a": "Fire shot"
+    },
+    {
+      "k": "↑ ↓",
+      "a": "Climb"
+    },
+    {
+      "k": "Esc",
+      "a": "Menu"
+    }
+  ],
+  "xargon": [
+    {
+      "k": "← →",
+      "a": "Move"
+    },
+    {
+      "k": "Ctrl",
+      "a": "Jump"
+    },
+    {
+      "k": "Alt",
+      "a": "Throw weapon"
+    },
+    {
+      "k": "↑",
+      "a": "Look up"
+    },
+    {
+      "k": "↓",
+      "a": "Duck"
+    },
+    {
+      "k": "Space",
+      "a": "Inventory"
+    },
+    {
+      "k": "Esc",
+      "a": "Menu"
+    }
+  ],
+  "monster-bash": [
+    {
+      "k": "← →",
+      "a": "Move"
+    },
+    {
+      "k": "Ctrl",
+      "a": "Jump"
+    },
+    {
+      "k": "Alt",
+      "a": "Fire slingshot"
+    },
+    {
+      "k": "↑",
+      "a": "Look up"
+    },
+    {
+      "k": "↓",
+      "a": "Duck"
+    },
+    {
+      "k": "Esc",
+      "a": "Menu"
+    }
+  ],
+  "alien-carnage": [
+    {
+      "k": "← →",
+      "a": "Move"
+    },
+    {
+      "k": "↑",
+      "a": "Jetpack fly"
+    },
+    {
+      "k": "↓",
+      "a": "Kneel"
+    },
+    {
+      "k": "Ctrl",
+      "a": "Jump"
+    },
+    {
+      "k": "Alt",
+      "a": "Fire flamethrower"
+    },
+    {
+      "k": "Esc",
+      "a": "Menu"
+    }
+  ],
+  "pharaohs-tomb": [
+    {
+      "k": "← →",
+      "a": "Move"
+    },
+    {
+      "k": "Ctrl",
+      "a": "Jump"
+    },
+    {
+      "k": "Alt",
+      "a": "Fire weapon"
+    },
+    {
+      "k": "↑ ↓",
+      "a": "Climb"
+    },
+    {
+      "k": "Esc",
+      "a": "Menu"
+    }
+  ],
+  "boppin": [
+    {
+      "k": "← →",
+      "a": "Move"
+    },
+    {
+      "k": "↑ ↓",
+      "a": "Use elevator"
+    },
+    {
+      "k": "Space + ← →",
+      "a": "Aim throw"
+    },
+    {
+      "k": "Space",
+      "a": "Throw block"
+    },
+    {
+      "k": "Esc",
+      "a": "Menu"
+    }
+  ],
+  "death-rally": [
+    {
+      "k": "↑",
+      "a": "Accelerate"
+    },
+    {
+      "k": "↓",
+      "a": "Brake reverse"
+    },
+    {
+      "k": "← →",
+      "a": "Steer"
+    },
+    {
+      "k": "Ctrl",
+      "a": "Accelerate"
+    },
+    {
+      "k": "Shift",
+      "a": "Brake reverse"
+    },
+    {
+      "k": "Space",
+      "a": "Fire weapon"
+    },
+    {
+      "k": "Tab",
+      "a": "Change view"
+    },
+    {
+      "k": "R",
+      "a": "Repair pit"
+    }
+  ],
+  "captain-comic": [
+    {
+      "k": "← →",
+      "a": "Move"
+    },
+    {
+      "k": "↑",
+      "a": "Jump"
+    },
+    {
+      "k": "Ctrl",
+      "a": "Fire blaster"
+    },
+    {
+      "k": "Space",
+      "a": "Use item"
+    },
+    {
+      "k": "Esc",
+      "a": "Quit"
+    }
   ]
 }

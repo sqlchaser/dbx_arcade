@@ -28,7 +28,9 @@
     "download_url": "https://archive.org/download/msdos_Rise_of_the_Triad_-_The_Hunt_Begins_Deluxe_Edition_1995/Rise_of_the_Triad_-_The_Hunt_Begins_Deluxe_Edition_1995.zip",
     "launch_cmd": "cd RotTDLX\\ROTT\nROTT.EXE",
     "cycles": "max",
-    "exclude": ["RotTDLX/cd/"]
+    "exclude": [
+      "RotTDLX/cd/"
+    ]
   },
   {
     "id": "blakestone",
@@ -159,7 +161,6 @@
     "download_url": "https://archive.org/download/msdos_SCORCH15_shareware/SCORCH15.zip",
     "launch_cmd": "SCORCH.EXE"
   },
-
   {
     "id": "heretic",
     "title": "Heretic",
@@ -195,5 +196,208 @@
     "launch_cmd": "RAP.EXE",
     "cycles": "max",
     "note": "Shareware ep1. Executable is RAP.EXE + FILE0000/0001.GLB. Extracted from PKLITE .SHR self-installer at build time."
+  },
+  {
+    "id": "catacomb-abyss",
+    "title": "The Catacomb Abyss",
+    "year": 1992,
+    "genre": "FPS",
+    "blurb": "Raycast first-person shooter from id co-founder John Carmack's Softdisk era; cast spells, blast undead.",
+    "download_url": "https://archive.org/download/msdos_Catacomb_Abyss_The_1992/Catacomb_Abyss_The_1992.zip",
+    "launch_cmd": "cd TheCatac\nCATABYSS.EXE",
+    "cycles": "max",
+    "_legal": "full/b"
+  },
+  {
+    "id": "kens-labyrinth",
+    "title": "Ken's Labyrinth",
+    "year": 1993,
+    "genre": "FPS",
+    "blurb": "Goofy pre-Build-engine raycaster by Ken Silverman (later author of Duke3D's Build engine).",
+    "download_url": "https://archive.org/download/msdos_Kens_Labyrinth_1993/Kens_Labyrinth_1993.zip",
+    "launch_cmd": "cd KensLaby\nKEN.EXE",
+    "cycles": "max",
+    "_legal": "full/b"
+  },
+  {
+    "id": "bio-menace",
+    "title": "Bio Menace",
+    "year": 1993,
+    "genre": "Platformer",
+    "blurb": "Snake Logan vs. mutant-infested Metro City; Keen-engine arcade action by Jim Norwood.",
+    "download_url": "https://archive.org/download/msdos_Bio_Menace_1993/Bio_Menace_1993.zip",
+    "launch_cmd": "cd BioMenac\nBMENACE1.EXE",
+    "_legal": "full/b"
+  },
+  {
+    "id": "god-of-thunder",
+    "title": "God of Thunder",
+    "year": 1993,
+    "genre": "Adventure",
+    "blurb": "Zelda-like top-down puzzle-combat starring Thor, by Ron Davis / Adept (Software Creations).",
+    "download_url": "https://archive.org/download/msdos_God_of_Thunder_1993/God_of_Thunder_1993.zip",
+    "launch_cmd": "cd godthund\nGOT.EXE",
+    "_legal": "full/b"
+  },
+  {
+    "id": "jill-of-the-jungle",
+    "title": "Jill of the Jungle",
+    "year": 1992,
+    "genre": "Platformer",
+    "blurb": "Epic MegaGames' colorful jungle platformer; transform into a phoenix, frog, and fish.",
+    "download_url": "https://archive.org/download/msdos_Jill_of_the_Jungle_1992/Jill_of_the_Jungle_1992.zip",
+    "launch_cmd": "cd JillJung\nJILL1.EXE",
+    "_legal": "shareware/a"
+  },
+  {
+    "id": "supaplex",
+    "title": "Supaplex",
+    "year": 1991,
+    "genre": "Puzzle",
+    "blurb": "Collect Infotrons and dodge Zonks/Snik-Snaks across 111 fiendish levels.",
+    "download_url": "https://archive.org/download/msdos_Supaplex_1991/Supaplex_1991.zip",
+    "launch_cmd": "cd Supaplex\nSUPAPLEX.EXE",
+    "_legal": "full/b"
+  },
+  {
+    "id": "realms-of-chaos",
+    "title": "Realms of Chaos",
+    "year": 1995,
+    "genre": "Platformer",
+    "blurb": "Apogee fantasy platformer; switch between warrior Andrew and sorceress Elandra.",
+    "download_url": "https://archive.org/download/RealmsOfChaos/ROC.ZIP",
+    "launch_cmd": "ROCSW.EXE",
+    "_legal": "shareware/a"
+  },
+  {
+    "id": "dark-ages",
+    "title": "Dark Ages",
+    "year": 1991,
+    "genre": "Platformer",
+    "blurb": "Early Apogee EGA platformer trilogy; Prince Garloth battles the wizard Garn.",
+    "download_url": "https://archive.org/download/msdos_Dark_Ages_1991/Dark_Ages_1991.zip",
+    "launch_cmd": "cd DarkAges\\1\nDA1.EXE",
+    "_legal": "shareware/a"
+  },
+  {
+    "id": "commander-keen-1",
+    "title": "Commander Keen: Marooned on Mars",
+    "year": 1990,
+    "genre": "Platformer",
+    "blurb": "The shareware-era classic that put id Software on the map; 8-year-old Billy Blaze saves Earth.",
+    "download_url": "https://archive.org/download/keen-1/Keen1.zip",
+    "launch_cmd": "cd Keen1\\KEEN1\nKEEN1.EXE",
+    "_legal": "shareware/a"
+  },
+  {
+    "id": "zzt",
+    "title": "ZZT",
+    "year": 1991,
+    "genre": "Adventure",
+    "blurb": "Tim Sweeney's ASCII-graphics adventure and editor — the game that founded Epic MegaGames.",
+    "download_url": "https://archive.org/download/msdos_Zzt_1991_Epic_Megagames_Inc/Zzt_1991_Epic_Megagames_Inc.zip",
+    "launch_cmd": "ZZT.EXE",
+    "_legal": "full/b"
+  },
+  {
+    "id": "jetpack",
+    "title": "Jetpack",
+    "year": 1993,
+    "genre": "Platformer",
+    "blurb": "Adept Software's jetpack-fueled gem-collector with a built-in level editor.",
+    "download_url": "https://archive.org/download/msdos_Jetpack_1993/Jetpack_1993.zip",
+    "launch_cmd": "cd Jetpack\nJETPACK.EXE",
+    "_legal": "full/b"
+  },
+  {
+    "id": "math-rescue",
+    "title": "Math Rescue",
+    "year": 1992,
+    "genre": "Platformer",
+    "blurb": "Apogee math-learning platformer; recover stolen numbers from the Gruzzles.",
+    "download_url": "https://archive.org/download/msdos_Math_Rescue_1992/Math_Rescue_1992.zip",
+    "launch_cmd": "cd MathResc\nMR1.EXE",
+    "_legal": "full/b"
+  },
+  {
+    "id": "word-rescue",
+    "title": "Word Rescue",
+    "year": 1992,
+    "genre": "Platformer",
+    "blurb": "Companion to Math Rescue; match words to pictures while dodging Gruzzles.",
+    "download_url": "https://archive.org/download/msdos_Word_Rescue_1992/Word_Rescue_1992.zip",
+    "launch_cmd": "cd WordResc\nWR1.EXE",
+    "_legal": "full/b"
+  },
+  {
+    "id": "xargon",
+    "title": "Xargon",
+    "year": 1994,
+    "genre": "Platformer",
+    "blurb": "Allen Pilgrim's Epic platformer (a Jill-of-the-Jungle successor); explore three worlds as Malvineous.",
+    "download_url": "https://archive.org/download/Xargon_Trilogy/Xargon.zip",
+    "launch_cmd": "XARGON.BAT",
+    "_legal": "full/b"
+  },
+  {
+    "id": "monster-bash",
+    "title": "Monster Bash",
+    "year": 1993,
+    "genre": "Platformer",
+    "blurb": "Johnny Dash rescues kidnapped pets from Count Chuck's monster mansion; spooky Apogee platformer.",
+    "download_url": "https://archive.org/download/msdos_Monster_Bash_1993/Monster_Bash_1993.zip",
+    "launch_cmd": "cd MonsterB\\BASH123\nBASH1.EXE",
+    "_legal": "full/b"
+  },
+  {
+    "id": "alien-carnage",
+    "title": "Alien Carnage (Halloween Harry)",
+    "year": 1993,
+    "genre": "Platformer",
+    "blurb": "Flamethrower-toting Harry torches aliens and frees hostages; fast SubZero/Apogee action.",
+    "download_url": "https://archive.org/download/Apogee-download-pack/Alien%20Carnage/alien_carnage%28full%29.zip",
+    "launch_cmd": "CARNAGE.EXE",
+    "_legal": "full/b"
+  },
+  {
+    "id": "pharaohs-tomb",
+    "title": "Pharaoh's Tomb",
+    "year": 1990,
+    "genre": "Platformer",
+    "blurb": "Whip-cracking Nevada Smith raids a booby-trapped tomb; early Apogee George-Broussard title.",
+    "download_url": "https://archive.org/download/msdos_Pharaohs_Tomb_1990/Pharaohs_Tomb_1990.zip",
+    "launch_cmd": "cd PharaohT\nPTOMB1.EXE",
+    "_legal": "shareware/a"
+  },
+  {
+    "id": "boppin",
+    "title": "Boppin'",
+    "year": 1994,
+    "genre": "Puzzle",
+    "blurb": "Quirky block-matching puzzler starring Yeet and Boik; 3D Realms / Accursed Toys.",
+    "download_url": "https://archive.org/download/msdos_Boppin_1994/Boppin_1994.zip",
+    "launch_cmd": "cd boppin\nBOPPIN.EXE",
+    "_legal": "full/b"
+  },
+  {
+    "id": "death-rally",
+    "title": "Death Rally",
+    "year": 1996,
+    "genre": "Racing",
+    "blurb": "Remedy's breakthrough debut: weaponized top-down racing with a young Max-Payne-era pedigree.",
+    "download_url": "https://archive.org/download/1rally/1rally.zip",
+    "launch_cmd": "cd RALLY\nDR.EXE",
+    "cycles": "max",
+    "_legal": "full/b",
+    "source_dir": "build/_work/death-rally/game"
+  },
+  {
+    "id": "captain-comic",
+    "title": "The Adventures of Captain Comic",
+    "year": 1988,
+    "genre": "Platformer",
+    "blurb": "The freeware platformer that inspired Commander Keen; Comic hunts three treasures on Tambi.",
+    "download_url": "https://archive.org/download/msdos_Adventures_of_Captain_Comic_The_1988/Adventures_of_Captain_Comic_The_1988.zip",
+    "launch_cmd": "cd AdvCapCo\ncomic.exe"
   }
 ]
